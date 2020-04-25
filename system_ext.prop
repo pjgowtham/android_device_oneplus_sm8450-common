@@ -5,6 +5,9 @@ persist.bluetooth.bqr.min_interval_ms=6000
 # Camera
 ro.camera.privileged.3rdpartyApp=com.aiunit.aon;
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # Display
 debug.sf.enable_hwc_vds=1
 
