@@ -5,7 +5,8 @@
 #
 
 # A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -22,6 +23,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.virtual_ab.compression.xor.enabled=true
+    ro.virtual_ab.userspace.snapshots.enabled=true
 
 # ANT+
 PRODUCT_PACKAGES += \
