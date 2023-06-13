@@ -1,8 +1,9 @@
-<manifest version="2.0" type="device" target-level="5">
+<manifest version="4.0" type="device" target-level="6">
+    <kernel target-level="6"/>
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>6.0</version>
+        <version>7.0</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
@@ -11,7 +12,7 @@
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
-        <version>6.0</version>
+        <version>7.0</version>
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
@@ -38,10 +39,10 @@
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
-        <version>2.4</version>
+        <version>2.7</version>
         <interface>
             <name>ICameraProvider</name>
-            <instance>legacy/0</instance>
+            <instance>legacy/1</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -82,37 +83,19 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.memtrack</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMemtrack</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
+        <fqname>@1.6::IRadio/slot1</fqname>
+        <fqname>@1.6::IRadio/slot2</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
-        <fqname>@1.5::IRadio/slot1</fqname>
-        <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.3</version>
         <interface>
             <name>IRadioConfig</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.soundtrigger</name>
-        <transport>hwbinder</transport>
-        <version>2.3</version>
-        <interface>
-            <name>ISoundTriggerHw</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -128,7 +111,7 @@
     <hal format="hidl">
         <name>android.hardware.tetheroffload.control</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IOffloadControl</name>
             <instance>default</instance>
@@ -173,9 +156,18 @@
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <version>2.3</version>
+        <version>2.5</version>
         <interface>
             <name>IFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.AGMIPC</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAGM</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -225,6 +217,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.camera.aon</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAONService</name>
+            <instance>aoncameraservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.camera.postproc</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -252,10 +253,18 @@
             <instance>slot2</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>vendor.qti.hardware.data.connectionfactory</name>
+        <interface>
+            <name>IFactory</name>
+            <instance>slot0</instance>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.iwlan</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IIWlan</name>
             <instance>slot1</instance>
@@ -269,6 +278,15 @@
         <interface>
             <name>ILinkLatency</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.dpmservice</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IDpmService</name>
+            <instance>DpmService</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -290,20 +308,11 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.perf</name>
-        <transport>hwbinder</transport>
-        <version>2.2</version>
-        <interface>
-            <name>IPerf</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.qconfig</name>
+        <name>vendor.qti.hardware.pal</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IQConfig</name>
+            <name>IPAL</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -339,10 +348,9 @@
             <instance>slot2</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>vendor.qti.hardware.radio.ims</name>
-        <transport>hwbinder</transport>
-        <version>1.7</version>
+        <version>7</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -378,12 +386,11 @@
             <instance>oemhook1</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>8</version>
         <interface>
-            <name>IQtiRadio</name>
+            <name>IQtiRadioStable</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
@@ -391,6 +398,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
+        <version>1.0</version>
         <version>2.6</version>
         <interface>
             <name>IQtiRadio</name>
@@ -447,21 +455,20 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.trustedui</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::ITrustedUI/default</fqname>
+        <fqname>@1.2::ITrustedUI/qtee-vm</fqname>
+        <fqname>@1.1::ITrustedInput/default</fqname>
+        <fqname>@1.1::ITrustedInput/qtee-vm</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.tui_comm</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>ITuiComm</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.vpp</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IHidlVppService</name>
-            <instance>vppService</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -498,6 +505,7 @@
         <name>vendor.qti.ims.factory</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
+        <version>2.1</version>
         <interface>
             <name>IImsFactory</name>
             <instance>default</instance>

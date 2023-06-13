@@ -1,5 +1,13 @@
 <compatibility-matrix version="2.0" type="framework">
     <hal format="hidl" optional="true">
+        <name>vendor.display.PanelChaplin</name>
+        <version>1.0</version>
+        <interface>
+            <name>IPanelChaplin</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.nxp.nxpnfc</name>
         <version>2.0</version>
         <interface>
@@ -31,6 +39,13 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>vendor.oplus.hardware.performance</name>
+        <interface>
+            <name>IPerformance</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.oplus.hardware.cwb</name>
         <version>1.0</version>
@@ -55,6 +70,14 @@
             <name>IOplusRadio</name>
             <instance>oplus_slot1</instance>
             <instance>oplus_slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.subsys_interface.subsys_radio</name>
+        <interface>
+            <name>ISubsysRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
