@@ -1,6 +1,5 @@
 # Audio
 persist.vendor.audio.fluence.voicerec=true
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 persist.vendor.audio.spv4.enable=false
 persist.vendor.audio.vbat.enabled=false
 ro.audio.monitorRotation=true
@@ -17,18 +16,21 @@ ro.vendor.display.sensortype=2
 vendor.display.primary_mixer_stages=9
 
 # Media
-ro.odm.build.media_performance_class=30
-vendor.media.vpp.enable=0
+vendor.media.vpp.oplus.version=2
 vendor.media.vpp.osie.enable=0
+vendor.media.vpp.osie.internal.enable=1
+vendor.media.vpp.osie.internal.version=osie2.0
 vendor.media.vpp.sr.enable=0
+vendor.media.vpp.sr.internal.enable=1
 
 # Radio
 persist.vendor.radio.force_on_dc=true
 persist.vendor.radio.poweron_opt=1
+persist.vendor.radio.stack_id_0=0
 persist.vendor.radio.stack_id_1=1
 ro.sys.reserve.integrate=true
-ro.vendor.oplus.radio.project=2
+ro.vendor.oplus.radio.project=1
 ro.vendor.oplus.radio.sar_regionmark=FCC
 
 # SVN
-ro.build.version.svn=30
+ro.build.version.svn=65
