@@ -75,19 +75,10 @@ function blob_fixup() {
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
         vendor/etc/media_*/video_system_specs.json)
-            sed -i "/max_retry_alloc_output_timeout/ s/1000/0/" "${2}"
+            sed -i "/max_retry_alloc_output_timeout/ s/2000/0/" "${2}"
             ;;
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
-            ;;
-        vendor/lib/libgui1_vendor.so)
-            "${PATCHELF}" --replace-needed "libui.so" "libui-v30.so" "${2}"
-            ;;
-        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
-            "${SIGSCAN}" -p "23 0B 00 94" -P "1F 20 03 D5" -f "${2}"
-            ;;
-        odm/lib/liblvimfs_wrapper.so|odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libaps_frame_registration.so|vendor/lib64/libalsc.so)
-            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
     esac
 }
