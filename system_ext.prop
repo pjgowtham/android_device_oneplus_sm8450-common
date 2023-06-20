@@ -1,6 +1,9 @@
 # Bluetooth
 persist.bluetooth.bqr.event_mask=0x8000000E
-persist.bluetooth.bqr.min_interval_ms=60000
+persist.bluetooth.bqr.min_interval_ms=6000
+
+# Camera
+ro.camera.privileged.3rdpartyApp=com.aiunit.aon;
 
 # Display
 debug.sf.enable_hwc_vds=1
@@ -26,7 +29,7 @@ persist.dbg.wfc_avail_ovr=1
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
-vendor.mm.enable.qcom_parser=4044018
+vendor.mm.enable.qcom_parser=4039922
 
 # Netmgr
 persist.data.df.agg.dl_pkt=10

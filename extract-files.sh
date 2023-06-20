@@ -75,12 +75,6 @@ function blob_fixup() {
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
-        vendor/lib/libgui1_vendor.so)
-            "${PATCHELF}" --replace-needed "libui.so" "libui-v30.so" "${2}"
-            ;;
-        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
-            "${SIGSCAN}" -p "23 0B 00 94" -P "1F 20 03 D5" -f "${2}"
-            ;;
     esac
 }
 
