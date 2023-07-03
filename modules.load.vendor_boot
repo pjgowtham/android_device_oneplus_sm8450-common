@@ -134,4 +134,3 @@ bcl_pmic5.ko
 nfc_i2c.ko
 oplus_bsp_task_sched.ko
 oplus_mdmrst.ko
-task_overload.ko
