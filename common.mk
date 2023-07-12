@@ -120,9 +120,13 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service
 
 # Camera
+$(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
+
 PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.service@2.2.vendor \
     android.hardware.camera.provider@2.7.vendor \
+    android.hardware.graphics.common-V2-ndk.vendor \
+    android.hardware.graphics.common-V2-ndk_platform.vendor \
     vendor.qti.hardware.camera.aon@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
