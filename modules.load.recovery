@@ -309,7 +309,6 @@ oplus_bsp_tp_notify.ko
 oplus_bsp_tp_tcm_oncell.ko
 oplus_bsp_tp_tcm_S3910.ko
 oplus_bsp_tp_syna_comnon.ko
-oplus_bsp_tp_ft3658u.ko
 oplus_bsp_tp_focal_common.ko
 oplus_bsp_tp_goodix_comnon.ko
 pm8941-pwrkey.ko
