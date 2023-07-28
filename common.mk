@@ -61,7 +61,7 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.taro:32
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio
+AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio/primary-hal
 QCV_FAMILY_SKUS := cape taro
 
 PRODUCT_COPY_FILES += \
