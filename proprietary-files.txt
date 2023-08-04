@@ -815,6 +815,8 @@ vendor/lib64/libdisplaydebug.so
 vendor/lib64/libgpu_tonemapper.so
 vendor/lib64/libqservice.so
 vendor/lib64/vendor.qti.hardware.display.config-V5-ndk_platform.so
+vendor/lib64/libgralloccore.so
+vendor/lib64/libgrallocutils.so
 
 # Display HDR
 vendor/lib64/libgame_enhance.so
