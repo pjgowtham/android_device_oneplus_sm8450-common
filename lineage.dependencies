@@ -6,5 +6,13 @@
   {
     "repository": "android_kernel_oneplus_sm8450",
     "target_path": "kernel/oneplus/sm8450"
+  },
+  {
+    "repository": "android_kernel_oneplus_sm8450-devicetrees",
+    "target_path": "kernel/oneplus/sm8450-devicetrees"
+  },
+  {
+    "repository": "android_kernel_oneplus_sm8450-modules",
+    "target_path": "kernel/oneplus/sm8450-modules"
   }
 ]
