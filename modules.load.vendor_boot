@@ -101,6 +101,7 @@ buildvariant.ko
 simcardnum.ko
 oplus_project.ko
 boot_mode.ko
+oplus_bsp_sched_assist.ko
 kernel_fb.ko
 qcom_rimps.ko
 c1dcvs_vendor.ko

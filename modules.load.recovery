@@ -101,6 +101,7 @@ buildvariant.ko
 simcardnum.ko
 oplus_project.ko
 boot_mode.ko
+oplus_bsp_sched_assist.ko
 kernel_fb.ko
 qcom_rimps.ko
 c1dcvs_vendor.ko
@@ -208,13 +209,12 @@ qcom_iommu_debug.ko
 lt9611uxc.ko
 msm_kgsl.ko
 oplus_bsp_fw_update.ko
-zram.ko
 oplus_bsp_ist_up.ko
 oplus_bsp_ist_down.ko
 oplus_bsp_mxm_up.ko
 oplus_bsp_mxm_down.ko
 oplus_bsp_tri_key.ko
-hdcp.ko
+hdcp_qseecom.ko
 qseecom-mod.ko
 sim_detect.ko
 oem_qmi_client.ko
@@ -242,6 +242,7 @@ phy-msm-snps-eusb2.ko
 dwc3-msm.ko
 ehset.ko
 lvstest.ko
+ssusb-redriver-nb7vpq904m.ko
 usb_f_diag.ko
 usb_f_qdss.ko
 usb_f_ccid.ko
@@ -253,8 +254,6 @@ tcpc_class.ko
 rt-regmap.ko
 repeater.ko
 repeater-i2c-eusb2.ko
-redriver.ko
-nb7vpq904m.ko
 oplus_bsp_tp_custom.ko
 oplus_bsp_tp_comon.ko
 oplus_bsp_tp_notify.ko
