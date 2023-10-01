@@ -96,7 +96,6 @@ BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8450
 TARGET_KERNEL_CONFIG := gki_defconfig vendor/waipio_GKI.config vendor/oplus_GKI.config
-TARGET_KERNEL_NO_GCC := true
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(COMMON_PATH)/modules.blocklist
