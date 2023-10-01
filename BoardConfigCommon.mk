@@ -95,10 +95,11 @@ BOARD_BOOTCONFIG:= \
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
+#BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
+BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8450
 TARGET_KERNEL_CONFIG := gki_defconfig vendor/waipio_GKI.config vendor/oplus_GKI.config
 
@@ -108,7 +109,26 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.l
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.vendor_boot))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
-TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
+BOOT_KERNEL_MODULES := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
+KERNEL_LTO := none
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/oneplus/sm8450-modules
+TARGET_KERNEL_EXT_MODULES := \
+  qcom/mmrm-driver \
+  qcom/audio-kernel \
+  qcom/camera-kernel \
+  qcom/dataipa/drivers/platform/msm \
+  qcom/datarmnet/core \
+  qcom/datarmnet-ext/aps \
+  qcom/datarmnet-ext/offload \
+  qcom/datarmnet-ext/shs \
+  qcom/datarmnet-ext/perf \
+  qcom/datarmnet-ext/perf_tether \
+  qcom/datarmnet-ext/sch \
+  qcom/datarmnet-ext/wlan \
+  qcom/display-drivers/msm \
+  qcom/eva-kernel \
+  qcom/video-driver \
+  qcom/wlan/qcacld-3.0/.qca6490
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/oplus_chg/battery/mmi_charging_enable
@@ -156,7 +176,6 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Recovery
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
