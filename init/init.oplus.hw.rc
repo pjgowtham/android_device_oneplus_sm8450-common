@@ -36,3 +36,19 @@ on property:ro.boot.prjname=20820
 
 on property:ro.boot.prjname=20821
     setprop ro.boot.hardware.revision "IN"
+
+# wly
+on property:ro.boot.prjname=20846
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20847
+    setprop ro.boot.hardware.revision "EU"
+
+on property:ro.boot.prjname=20848
+    setprop ro.boot.hardware.revision "IN"
+
+on property:ro.boot.prjname=20849
+    setprop ro.boot.hardware.revision "US"
+
+on property:ro.boot.prjname=2084A
+    setprop ro.boot.hardware.revision "TMO"
