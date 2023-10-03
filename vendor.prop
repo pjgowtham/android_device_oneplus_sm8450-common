@@ -89,6 +89,8 @@ persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 ro.bluetooth.a2dp_offload.supported=true
+vendor.qc2audio.suspend.enabled=true
+vendor.qc2audio.per_frame.flac.dec.enabled=true
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -97,7 +99,7 @@ ro.soc.manufacturer=QTI
 persist.vendor.dpm.vndr.feature=11
 persist.vendor.dpm.vndr.halservice.enable=1
 persist.vendor.dpm.vndr.idletimer.mode=default
-persist.vendor.dpm.vndr.tcm=2
+#persist.vendor.dpm.vndr.tcm=2
 
 # Display
 vendor.display.comp_mask=0
@@ -167,9 +169,6 @@ debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
-vendor.audio.c2.preferred=true
-vendor.qc2audio.suspend.enabled=true
-vendor.qc2audio.per_frame.flac.dec.enabled=true
 
 # Netflix
 ro.netflix.bsp_rev=Q8450-34634-1
