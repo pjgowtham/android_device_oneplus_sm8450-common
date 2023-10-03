@@ -55,6 +55,22 @@ void vendor_load_properties() {
         case 20821: // IN
             OverrideProperty("ro.product.product.model", "MT2111");
             break;
+        // wly
+        case 20846: // CN
+            OverrideProperty("ro.product.product.model", "NE2210");
+            break;
+        case 20847: // EU
+            OverrideProperty("ro.product.product.model", "NE2213");
+            break;
+        case 20848: // IN
+            OverrideProperty("ro.product.product.model", "NE2211"); //correct me
+            break;
+        case 20849: // US
+            OverrideProperty("ro.product.product.model", "NE2215");
+            break;
+        //case 2084A: // TMO
+        //    OverrideProperty("ro.product.product.model", "NE2217");
+        //    break;
         default:
             LOG(ERROR) << "Unexpected project name: " << prjname;
     }
