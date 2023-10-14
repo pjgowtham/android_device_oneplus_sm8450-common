@@ -193,6 +193,7 @@ ro.telephony.default_network=33,33
 persist.vendor.rcs.singlereg.feature=1
 
 # Sensors
+persist.vendor.sensors.debug.hal=0
 persist.vendor.sensors.enable.mag_filter=true
 
 # USB
