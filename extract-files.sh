@@ -105,6 +105,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q libhidlbase_shim.so "${2}" || "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
             ;;
+        vendor/bin/hw/android.hardware.security.keymint-service-qti)
+            [ "$2" = "" ] && return 0
+            grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
+            ;;
         vendor/etc/media_*/video_system_specs.json)
             [ "$2" = "" ] && return 0
             sed -i "/max_retry_alloc_output_timeout/ s/2000/0/" "${2}"
