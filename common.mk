@@ -112,6 +112,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.service@2.2.vendor \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.provider@2.7.vendor \
     android.hardware.graphics.common-V2-ndk.vendor \
     android.hardware.graphics.common-V2-ndk_platform.vendor \
