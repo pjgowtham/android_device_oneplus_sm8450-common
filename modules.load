@@ -4,10 +4,10 @@ lzo.ko
 lzo-rle.ko
 msm_show_resume_irq.ko
 mhi_cntrl_qcom.ko
-mhi.ko
 mhi_dev_uci.ko
 mhi_dev_netdev.ko
 mhi_dev_dtr.ko
+mhi.ko
 phy-qcom-ufs-qmp-v4-lahaina.ko
 phy-qcom-ufs-qmp-v4-parrot.ko
 phy-qcom-ufs-qmp-v4-anarok.ko
@@ -104,7 +104,7 @@ oplus_bsp_ist_down.ko
 oplus_bsp_mxm_up.ko
 oplus_bsp_mxm_down.ko
 oplus_bsp_tri_key.ko
-hdcp_qseecom.ko
+hdcp.ko
 qseecom-mod.ko
 sim_detect.ko
 oem_qmi_client.ko
@@ -132,7 +132,6 @@ phy-msm-snps-eusb2.ko
 dwc3-msm.ko
 ehset.ko
 lvstest.ko
-ssusb-redriver-nb7vpq904m.ko
 usb_f_diag.ko
 usb_f_qdss.ko
 usb_f_ccid.ko
@@ -144,6 +143,8 @@ tcpc_class.ko
 rt-regmap.ko
 repeater.ko
 repeater-i2c-eusb2.ko
+redriver.ko
+nb7vpq904m.ko
 oplus_bsp_tp_custom.ko
 oplus_bsp_tp_comon.ko
 oplus_bsp_tp_notify.ko
