@@ -110,9 +110,6 @@ vendor/lib/rfsa/adsp/libvpt_action_recognition
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio
-odm/lib64/lib_lvacfs.so
-odm/lib64/liblvacfs_wrapper.so
-odm/lib64/libtfa98xx.so
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
