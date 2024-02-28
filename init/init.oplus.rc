@@ -8,11 +8,6 @@ on fs
     # Update touchpanel firmware in case we ship newer firmware in /odm
     write /proc/touchpanel/tp_fw_update 0
 
-on early-boot
-    # Radio
-    exec_start oplus-sh
-    setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
-
     # SSR
     write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
@@ -73,11 +68,6 @@ on property:vendor.post_boot.parsed=1
     # IRQ 240: kgsl_3d0_irq
     write /proc/irq/243/smp_affinity_list 2
     write /proc/irq/240/smp_affinity_list 1
-
-service oplus-sh /odm/bin/init.oplus.sh
-    user root
-    group root
-    oneshot
 
 service oplus_sensor_fb /odm/bin/oplus_sensor_fb
     user system
