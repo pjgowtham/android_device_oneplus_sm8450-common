@@ -64,6 +64,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff)
+            grep -q libshims_fingerprint.oplus.so "${2}" || "${PATCHELF}" --add-needed libshims_fingerprint.oplus.so "${2}"
+            ;;
         odm/bin/hw/vendor.pixelworks.hardware.display.iris-service)
             [ "$2" = "" ] && return 0
             grep -q "libprocessgroup.so" "${2}" || "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
