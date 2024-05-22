@@ -110,7 +110,6 @@ BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8450
-TARGET_KERNEL_CLANG_VERSION := r450784e
 TARGET_KERNEL_CONFIG := gki_defconfig vendor/waipio_GKI.config vendor/oplus_GKI.config
 
 # Kernel modules
@@ -137,7 +136,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/display-drivers/msm \
     qcom/opensource/eva-kernel \
     qcom/opensource/video-driver \
-    qcom/opensource/wlan/qcacld-3.0
+    qcom/opensource/wlan/qcacld-3.0/.qca6490
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/oplus_chg/battery/mmi_charging_enable
@@ -189,7 +188,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-BOOT_SECURITY_PATCH := 2024-04-05
+BOOT_SECURITY_PATCH := 2024-05-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
