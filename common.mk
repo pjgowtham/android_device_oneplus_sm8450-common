@@ -120,6 +120,10 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     vendor.qti.hardware.camera.aon@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libutilscallstack.vendor \
+    libyuv.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -502,7 +506,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libnl \
-    libpng.vendor:32 \
+    libpng.vendor \
     libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
