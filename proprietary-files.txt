@@ -901,7 +901,6 @@ vendor/etc/media_codecs_taro.xml
 vendor/etc/media_codecs_taro_vendor.xml
 vendor/etc/media_codecs_ukee.xml
 vendor/etc/media_codecs_ukee_vendor.xml
-vendor/etc/media_codecs_vendor_audio.xml
 vendor/lib64/libEvrcSwCodec.so
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libdsd2pcm.so
