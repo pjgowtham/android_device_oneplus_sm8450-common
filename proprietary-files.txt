@@ -116,7 +116,6 @@ vendor/etc/models/acd/speech.eai
 vendor/etc/card-defs.xml
 -vendor/lib/libar-pal.so
 vendor/lib64/hw/audio.primary.taro.so
-vendor/lib64/hw/sound_trigger.primary.taro.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libEvrcSwCodec.so
