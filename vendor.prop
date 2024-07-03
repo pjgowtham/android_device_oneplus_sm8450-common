@@ -209,6 +209,9 @@ vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
 
+# VNDK
+ro.vndk.version=35
+
 # WiFi
 wifi.aware.interface=wifi-aware0
 
