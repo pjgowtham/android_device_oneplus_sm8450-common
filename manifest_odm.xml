@@ -12,25 +12,20 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.oplus.hardware.appradio</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
+    <hal format="aidl">
+        <name>vendor.oplus.hardware.appradioaidl</name>
+        <version>1</version>
         <interface>
-            <name>IOplusAppRadio</name>
-            <instance>oplus_app_slot1</instance>
-            <instance>oplus_app_slot2</instance>
+            <name>IAppRadioStable</name>
+            <instance>OplusAppRadio0</instance>
+            <instance>OplusAppRadio1</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>vendor.oplus.hardware.ims</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOplusImsRadio</name>
-            <instance>oplusimsradio0</instance>
-            <instance>oplusimsradio1</instance>
-        </interface>
+        <version>1</version>
+        <fqname>IImsStable/OplusImsRadio0</fqname>
+        <fqname>IImsStable/OplusImsRadio1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.oplus.hardware.radio</name>
