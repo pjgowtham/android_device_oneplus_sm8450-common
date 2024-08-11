@@ -74,14 +74,14 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.kernel.post_boot-lahaina.sh",
-    src: "init.kernel.post_boot-lahaina.sh",
+    name: "init.kernel.post_boot-cape.sh",
+    src: "init.kernel.post_boot-cape.sh",
     vendor: true,
 }
 
 sh_binary {
-    name: "init.kernel.post_boot-yupik.sh",
-    src: "init.kernel.post_boot-yupik.sh",
+    name: "init.kernel.post_boot-taro.sh",
+    src: "init.kernel.post_boot-taro.sh",
     vendor: true,
 }
 
