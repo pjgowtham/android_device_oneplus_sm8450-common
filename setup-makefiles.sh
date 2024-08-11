@@ -22,14 +22,13 @@ source "${HELPER}"
 
 function vendor_imports() {
     cat <<EOF >>"$1"
-		"device/oneplus/sm8350-common",
-		"hardware/qcom-caf/sm8350",
+		"device/oneplus/sm8450-common",
+		"hardware/qcom-caf/sm8450",
 		"hardware/qcom-caf/wlan",
 		"hardware/oplus",
 		"vendor/qcom/opensource/commonsys/display",
 		"vendor/qcom/opensource/commonsys-intf/display",
 		"vendor/qcom/opensource/dataservices",
-		"vendor/qcom/opensource/display",
 EOF
 }
 
@@ -41,11 +40,18 @@ function lib_to_package_fixup_vendor_variants() {
     case "$1" in
         com.qualcomm.qti.dpm.api@1.0 | \
             libmmosal | \
+            vendor.qti.hardware.dpmservice@1.0 | \
+            vendor.qti.hardware.dpmservice@1.1 | \
+            vendor.qti.hardware.pal@1.0-impl | \
+            vendor.qti.hardware.qccsyshal@1.0 | \
+            vendor.qti.hardware.qccsyshal@1.1 | \
+            vendor.qti.hardware.qccvndhal@1.0 | \
             vendor.qti.hardware.wifidisplaysession@1.0 | \
             vendor.qti.imsrtpservice@3.0)
             echo "$1-vendor"
             ;;
-        libOmxCore | \
+        libagmclient | \
+            libpalclient | \
             libwpa_client) ;;
         *)
             return 1
@@ -63,7 +69,7 @@ function lib_to_package_fixup() {
 setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "ferrarri ovaltine udon wly"
+write_headers "ferrari ovaltine udon wly"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt"

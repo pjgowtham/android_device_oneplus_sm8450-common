@@ -64,45 +64,50 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff)
-            grep -q libshims_fingerprint.oplus.so "${2}" || "${PATCHELF}" --add-needed libshims_fingerprint.oplus.so "${2}"
-            ;;
-        odm/bin/hw/vendor.pixelworks.hardware.display.iris-service)
+        odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service)
             [ "$2" = "" ] && return 0
-            grep -q "libprocessgroup.so" "${2}" || "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.biometrics.common-V1-ndk_platform.so" "android.hardware.biometrics.common-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.biometrics.fingerprint-V1-ndk_platform.so" "android.hardware.biometrics.fingerprint-V1-ndk.so" "${2}"
             ;;
         odm/etc/camera/CameraHWConfiguration.config)
             [ "$2" = "" ] && return 0
             sed -i "/SystemCamera = / s/1;/0;/g" "${2}"
             sed -i "/SystemCamera = / s/0;$/1;/" "${2}"
             ;;
-        odm/lib/liblvimfs_wrapper.so|odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libaps_frame_registration.so|vendor/lib64/libalsc.so)
+        odm/lib64/libPerfectColor.so|odm/lib64/libSuperRaw.so|odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libYTCommon.so|odm/lib64/libaps_frame_registration.so|odm/lib64/libyuv2.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
-        odm/lib64/libAlgoProcess.so|vendor/lib/libui-v30.so)
+        odm/lib64/libAlgoProcess.so)
             [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V1-ndk_platform.so" "android.hardware.graphics.common-V5-ndk.so" "${2}"
-            ;;
-        odm/lib64/libwvhidl.so|odm/lib64/mediadrm/libwvdrmengine.so)
-            [ "$2" = "" ] && return 0
-            grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V2-ndk_platform.so" "android.hardware.graphics.common-V5-ndk.so" "${2}"
             ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             [ "$2" = "" ] && return 0
             sed -i "s/\/my_product/\/product/" "${2}"
             ;;
-        system_ext/lib/libwfdservice.so)
+        system_ext/lib64/libwfdservice.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V3-cpp.so" "${2}"
             ;;
-        system_ext/lib64/libwfdnative.so)
+        vendor/bin/hw/android.hardware.gnss-aidl-service-qti|vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so|vendor/lib64/libgarden.so|vendor/lib64/libgarden_haltests_e2e.so)
             [ "$2" = "" ] && return 0
-            sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.gnss-V1-ndk_platform.so" "android.hardware.gnss-V1-ndk.so" "${2}"
+            ;;
+        vendor/bin/hw/android.hardware.security.keymint-service-qti|vendor/lib64/libqtikeymint.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.hardware.security.keymint-V1-ndk_platform.so" "android.hardware.security.keymint-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.security.secureclock-V1-ndk_platform.so" "android.hardware.security.secureclock-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.security.sharedsecret-V1-ndk_platform.so" "android.hardware.security.sharedsecret-V1-ndk.so" "${2}"
+            grep -q "android.hardware.security.rkp-V1-ndk.so" "${2}" || "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk.so" "${2}"
+            ;;
+        vendor/lib64/vendor.libdpmframework.so)
+            [ "$2" = "" ] && return 0
+            grep -q libhidlbase_shim.so "${2}" || "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
             ;;
         vendor/etc/media_*/video_system_specs.json)
             [ "$2" = "" ] && return 0
-            sed -i "/max_retry_alloc_output_timeout/ s/1000/0/" "${2}"
+            sed -i "/max_retry_alloc_output_timeout/ s/2000/0/" "${2}"
             ;;
         vendor/etc/libnfc-nci.conf)
             [ "$2" = "" ] && return 0
@@ -114,19 +119,16 @@ function blob_fixup() {
             sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
             ;;
         vendor/etc/media_codecs_cape.xml|vendor/etc/media_codecs_cape_vendor.xml|vendor/etc/media_codecs_taro.xml|vendor/etc/media_codecs_taro_vendor.xml)
+            [ "$2" = "" ] && return 0
             sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d" "${2}"
             ;;
         vendor/etc/msm_irqbalance.conf)
             [ "$2" = "" ] && return 0
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
-        vendor/lib/libgui1_vendor.so)
+        vendor/lib64/libcamximageformatutils.so)
             [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "libui.so" "libui-v30.so" "${2}"
-            ;;
-        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
-            [ "$2" = "" ] && return 0
-            "${SIGSCAN}" -p "23 0B 00 94" -P "1F 20 03 D5" -f "${2}"
+            "${PATCHELF}" --replace-needed "vendor.qti.hardware.display.config-V2-ndk_platform.so" "vendor.qti.hardware.display.config-V5-ndk.so" "${2}"
             ;;
         *)
             return 1
