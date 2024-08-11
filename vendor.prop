@@ -2,14 +2,21 @@
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
+af.fast_track_multiplier=1
+audio.offload.video=true
+persist.vendor.audio.avs.afe_api_version=2
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
-persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.ha_proxy.enabled=true
-persist.vendor.audio.spv4.enable=true
-persist.vendor.audio.vbat.enabled=true
+persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
+ro.af.client_heap_size_kbyte=7168
+ro.audio.flinger_standbytime_ms=2000
+ro.vendor.audio.downmix.attenuation=1
+ro.vendor.audio.sdk.ssr=false
 vendor.audio.adm.buffering.ms=2
+vendor.audio.c2.preferred=true
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.battery_listener.enable=true
@@ -18,6 +25,7 @@ vendor.audio.feature.compress_meta_data.enable=true
 vendor.audio.feature.concurrent_capture.enable=true
 vendor.audio.feature.custom_stereo.enable=true
 vendor.audio.feature.display_port.enable=true
+vendor.audio.feature.dmabuf.cma.memory.enable=true
 vendor.audio.feature.dynamic_ecns.enable=true
 vendor.audio.feature.fluence.enable=true
 vendor.audio.feature.fm.enable=true
@@ -28,7 +36,6 @@ vendor.audio.feature.incall_music.enable=true
 vendor.audio.feature.keep_alive.enable=true
 vendor.audio.feature.kpi_optimize.enable=true
 vendor.audio.feature.multi_voice_session.enable=true
-vendor.audio.feature.power_mode.enable=true
 vendor.audio.feature.ras.enable=true
 vendor.audio.feature.snd_mon.enable=true
 vendor.audio.feature.spkr_prot.enable=true
@@ -40,11 +47,12 @@ vendor.audio.feature.vbat.enable=true
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio.hal.output.suspend.supported=true
-vendor.audio.hw.aac.encoder=true
 vendor.audio.offload.buffer.size.kb=32
 vendor.audio.offload.gapless.enabled=true
+vendor.audio.offload.multiaac.enable=true
 vendor.audio.offload.track.enable=true
-vendor.audio.spkr_prot.tx.sampling_rate=48000
+vendor.audio.parser.ip.buffer.size=262144
+vendor.audio.ull_record_period_multiplier=2
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio.use.sw.mpegh.decoder=true
@@ -81,29 +89,46 @@ persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 ro.bluetooth.a2dp_offload.supported=true
+vendor.qc2audio.suspend.enabled=true
+vendor.qc2audio.per_frame.flac.dec.enabled=true
 
 # Camera
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
 
 # Chipset
-ro.soc.manufacturer=Qualcomm
-
-# Crypto
-ro.crypto.dm_default_key.options_format.version=2
-ro.crypto.volume.metadata.method=dm-default-key
+ro.soc.manufacturer=QTI
 
 # DPM
-persist.vendor.dpm.idletimer.mode=default
-persist.vendor.dpmhalservice.enable=1
+persist.vendor.dpm.vndr.feature=11
+persist.vendor.dpm.vndr.halservice.enable=1
+persist.vendor.dpm.vndr.idletimer.mode=default
+#persist.vendor.dpm.vndr.tcm=2
 
 # Display
 vendor.display.comp_mask=0
+vendor.display.disable_3d_adaptive_tm=1
+vendor.display.disable_content_fps_hint=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
+vendor.display.disable_noise_layer=1
 vendor.display.disable_offline_rotator=1
+vendor.display.disable_scaler=0
+vendor.display.disable_sdr_dimming=1
+vendor.display.disable_sdr_histogram=1
+vendor.display.disable_spec_fence=1
+vendor.display.disable_stc_dimming=1
+vendor.display.disable_system_load_check=1
 vendor.display.enable_async_powermode=0
+vendor.display.enable_async_vds_creation=1
+vendor.display.enable_dpps_dynamic_fps=1
+vendor.display.enable_early_wakeup=1
+vendor.display.enable_hdr10_gpu_target=1
 vendor.display.enable_optimize_refresh=1
+vendor.display.enable_rounded_corner=0
+vendor.display.use_layer_ext=1
+vendor.display.use_smooth_motion=1
+vendor.display.vds_allow_hwc=1
 
 # DRM
 drm.service.enabled=true
@@ -119,12 +144,15 @@ vendor.gatekeeper.disable_spu=true
 
 # Graphics
 debug.sf.disable_client_composition_cache=1
+debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
+debug.sf.predict_hwc_composition_strategy=0
 debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
 debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
 debug.sf.latch_unsignaled=1
+debug.sf.treat_170m_as_sRGB=1
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -134,6 +162,7 @@ ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
+ro.surface_flinger.supports_background_blur=1
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
@@ -142,30 +171,31 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.incremental.enable=yes
 
 # Media
+debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
 
 # Netflix
-ro.netflix.bsp_rev=Q875-32408-1
+ro.netflix.bsp_rev=Q8450-34634-1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# QTEE
-persist.vendor.qteeconnector.retrying_interval=30
-persist.vendor.qteeconnector.retrying_timeout=2000
-
 # Radio
 persist.radio.multisim.config=dsds
+persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
+persist.vendor.radio.sib16_support=1
 ro.telephony.default_network=33,33
 
+# RCS
+persist.vendor.rcs.singlereg.feature=1
+
 # Sensors
-persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.debug.hal=0
-persist.vendor.sensors.on_change_sample_period=true
-persist.vendor.sensors.sync_request=true
+persist.vendor.sensors.enable.mag_filter=true
 
 # USB
 sys.usb.mtp.batchcancel=1
