@@ -14,7 +14,6 @@ vendor/etc/acdbdata/waipio_mtp/MTP_workspaceFileXml.qwsp
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
@@ -133,7 +132,6 @@ vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libdsd2pcm.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
-vendor/lib64/libfmpal.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
 -vendor/lib64/liblx-osal.so
@@ -141,16 +139,10 @@ vendor/lib64/libmcs.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
 # Audio AGM
-vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service
 -vendor/lib64/libagm.so
-vendor/lib64/libagmclient.so
-vendor/lib64/libagmmixer.so
 -vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio FX modules
 vendor/lib64/soundfx/libasphere.so

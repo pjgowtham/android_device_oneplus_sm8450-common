@@ -54,6 +54,7 @@ PRODUCT_PACKAGES += \
     libagm_pcm_plugin \
     libbatterylistener \
     libeffectproxy \
+    libfmpal \
     libhapticgenerator \
     libldnhncr \
     libqcompostprocbundle \
