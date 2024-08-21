@@ -362,10 +362,6 @@ DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
 ODM_MANIFEST_FILES := $(LOCAL_PATH)/vintf/manifest_odm.xml
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/apex/com.android.vndk.current.on_vendor.apex:$(TARGET_COPY_OUT_VENDOR)/apex/com.android.vndk.current.on_vendor.apex
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \

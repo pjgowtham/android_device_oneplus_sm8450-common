@@ -156,6 +156,9 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
+# Camera
+system/lib64/libziparchive.so:odm/lib64/libziparchive_odm.so;FIX_SONAME
+
 # Charger
 odm/firmware/fastchg/charging_thermal_config_default.txt
 vendor/etc/charger_fw_fstab.qti
