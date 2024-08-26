@@ -209,6 +209,10 @@ PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm.policy:vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy \
     $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy:vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 
+# OSENSE
+PRODUCT_PACKAGES += \
+    vendor.oplus.hardware.osense.client-service
+
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
