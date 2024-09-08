@@ -82,6 +82,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V2-ndk_platform.so" "android.hardware.graphics.common-V5-ndk.so" "${2}"
             ;;
+        odm/lib64/libextensionlayer.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF_0_17_2}" --replace-needed "libziparchive.so" "libziparchive_odm.so" "${2}"
+            ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             [ "$2" = "" ] && return 0
             sed -i "s/\/my_product/\/product/" "${2}"
