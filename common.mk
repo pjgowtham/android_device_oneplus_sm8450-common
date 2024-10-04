@@ -246,7 +246,7 @@ $(call soong_config_set,qtipower,tap_to_wake_node,/proc/touchpanel/double_tap_en
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.multihal \
+    android.hardware.sensors-service.oplus-multihal \
     sensors.dynamic_sensor_hal \
     sensors.oplus
 
