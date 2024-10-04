@@ -240,7 +240,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.multihal \
+    android.hardware.sensors-service.oplus-multihal \
     sensors.dynamic_sensor_hal \
     sensors.oplus
 
