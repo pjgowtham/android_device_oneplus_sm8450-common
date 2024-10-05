@@ -127,10 +127,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
-# Doze
-PRODUCT_PACKAGES += \
-    OplusDoze
-
 # Fastboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \
