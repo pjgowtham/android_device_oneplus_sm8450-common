@@ -76,13 +76,17 @@ function blob_fixup() {
             sed -i "/SystemCamera = / s/1;/0;/g" "${2}"
             sed -i "/SystemCamera = / s/0;$/1;/" "${2}"
             ;;
+        odm/lib/liblvimfs_wrapper.so|odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libaps_frame_registration.so|vendor/lib64/libalsc.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        odm/lib64/libAlgoProcess.so|vendor/lib/libui-v30.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V1-ndk_platform.so" "android.hardware.graphics.common-V5-ndk.so" "${2}"
+            ;;
         odm/lib64/libwvhidl.so|odm/lib64/mediadrm/libwvdrmengine.so)
             [ "$2" = "" ] && return 0
             grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
-            ;;
-        product/app/PowerOffAlarm/PowerOffAlarm.apk)
-            [ "$2" = "" ] && return 0
-            apktool_patch "${2}" "${MY_DIR}/blob-patches/PowerOffAlarm.patch" -s
             ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             [ "$2" = "" ] && return 0
@@ -123,10 +127,6 @@ function blob_fixup() {
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             [ "$2" = "" ] && return 0
             "${SIGSCAN}" -p "23 0B 00 94" -P "1F 20 03 D5" -f "${2}"
-            ;;
-        odm/lib/liblvimfs_wrapper.so|odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libaps_frame_registration.so|vendor/lib64/libalsc.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         *)
             return 1
