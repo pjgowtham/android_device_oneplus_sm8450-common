@@ -1198,6 +1198,10 @@ product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 
+# RemoteFS
+vendor/bin/rmt_storage
+vendor/etc/init/vendor.qti.rmt_storage.rc
+
 # Sensors
 odm/bin/oplus_sensor_fb
 odm/lib64/liboplus_service.so
