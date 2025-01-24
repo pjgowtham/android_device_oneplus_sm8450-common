@@ -29,7 +29,6 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
 ]
 
-
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_vendor' if partition in ['odm', 'vendor'] else None
 
@@ -49,7 +48,11 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
     (
-        'libagmclient',
+        'libar-pal',
+        'libar-acdb',
+        'liblx-osal',
+        'libats',
+        'libagm',
         'libpalclient',
     ): lib_fixup_remove,
 }
