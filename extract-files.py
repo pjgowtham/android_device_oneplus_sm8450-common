@@ -58,6 +58,9 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/bin/hw/vendor-oplus-hardware-performance-V1-service': blob_fixup()
+        .add_needed('libbase_shim.so')
+        .add_needed('libprocessgroup_shim.so'),
     ('odm/lib64/mediadrm/libwvdrmengine.so', 'odm/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'product/app/PowerOffAlarm/PowerOffAlarm.apk': blob_fixup()
