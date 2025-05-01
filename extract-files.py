@@ -62,7 +62,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'sm8350-common',
+    'sm8450-common',
     'oneplus',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
