@@ -305,27 +305,16 @@ vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
 
 # Display (HWC)
-odm/etc/vintf/manifest/manifest_oplus_cwb.xml
-odm/lib64/vendor.oplus.hardware.cwb@1.0.so
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
-vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib64/libcwb_qcom.so
 vendor/lib64/libdpps.so
 vendor/lib64/libgame_enhance.so
-vendor/lib64/libhistogram.so
 vendor/lib64/libmemutils.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libqdutils.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/vendor.oplus.hardware.cwb@1.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display (Pixelworks)
 odm/bin/hw/vendor.pixelworks.hardware.display.iris-service
@@ -342,6 +331,7 @@ odm/lib64/libpwsoftirisPCS.so
 odm/lib64/libsnapdragoncolor-pxlw.so
 odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
 odm/lib64/vendor.pixelworks.hardware.feature@1.1.so
+vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishalwrapper.so
 vendor/lib64/vendor.pixelworks.hardware.display@1.0.so
@@ -350,31 +340,27 @@ vendor/lib64/vendor.pixelworks.hardware.display@1.2.so
 vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display (SDM)
-vendor/etc/display/DPU660.xml
-vendor/etc/display/DPU670.xml
-vendor/etc/display/DPU720.xml
-vendor/etc/display/DPU7__.xml
-vendor/etc/display/DPU820.xml
-vendor/etc/display/DPU8__.xml
-vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/display/thermallevel_to_fps.xml
-vendor/lib64/libbacklight-calib.so
-vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libhdr_backlight_adapter.so
-vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/libqrtrclient.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
+vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
+vendor/etc/display/DPU670.xml|e5131a60ceff29ca5eb561eec7eddadef1d0486f
+vendor/etc/display/DPU720.xml|4e54e8712d65773eb87867bf64a4cb98ea9bb8c3
+vendor/etc/display/DPU7__.xml|c056f3cb9fa123ca3de5b2a9775c184dddf25b9d
+vendor/etc/display/DPU820.xml|35afcb7834d13eacc8f14d2ff4ac5132bb01a563
+vendor/etc/display/DPU8__.xml|2360038d60e9dff36d7f14a59a25da74bac1abe4
+vendor/etc/display/DPU9__.xml|ed8ec4a7a6852d8340bd98448db9f13634083edd
+vendor/lib64/libbacklight-calib.so|a5990fa87932196f9e2c38b2ec85786daa6b3a9c
+vendor/lib64/libdigital-dimming.so|66506a386dc80da0994c9d4aeac34edfc1830c5c
+vendor/lib64/libdisplayqos.so|f5620aafca45f8f5c89e5af5d808bd20602a4654
+vendor/lib64/libdisplayskuutils.so|405e2456d79c8e0118efb9ade2d8a8d82565af5c
+vendor/lib64/libhdr_backlight_adapter.so|57036c19938fe40e73e9b9e3d4c6a6073d7aa858
+vendor/lib64/libqrtrclient.so|251146748531781010bcc33110f6afaa340f6a33
+vendor/lib64/libqseed3.so|6fcc4cb419053b57fc14d7cb2e3fdb18901cc87e
+vendor/lib64/librcmask.so|36919cfe71e1e6ab4e507f98dab320b7046d24c4
+vendor/lib64/libsdm-color.so|3ffdac82ec83cfcf0cfab32718a08500ec73e36d
+vendor/lib64/libsdm-colormgr-algo.so|0c922b88dc8f11a9c8dbe78daec337d4d5333087
+vendor/lib64/libsdm-disp-vndapis.so|169adaa522f75d622e76a1597c486eff4551c5a3
+vendor/lib64/libsdmextension.so|08d321d3e0da2231a29e3ec92604dca48c8895e3
+vendor/lib64/libtestutils.so|61b98f252afde4eb7c674de870e7afb590c9bb2a
+vendor/lib64/libtinyxml2_1.so|ae0c9190fd54c18a6c28dfccdfd29655abcb08de
 
 # Display calibration data
 vendor/etc/display/qdcm_calib_data_samsung_S6E3HC3_dsc_cmd_mode_panel.json
@@ -1232,6 +1218,7 @@ vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
 
 # Snapdragon Computer Vision Engine
 vendor/etc/eva/facedetection/model3.dat
