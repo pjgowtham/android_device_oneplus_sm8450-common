@@ -574,6 +574,7 @@ vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
 # GNSS
+odm/etc/gps.conf
 odm/etc/izat.conf
 odm/etc/sap.conf
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
@@ -600,7 +601,6 @@ vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 vendor/etc/apdr.conf
 vendor/etc/batching.conf
 vendor/etc/cacert_location.pem
-vendor/etc/gps.conf
 vendor/etc/izat.conf
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
