@@ -211,9 +211,6 @@ qseecom-mod.ko
 sim_detect.ko
 oem_qmi_client.ko
 oplus_gpio.ko
-aw8697.ko
-haptic.ko
-haptic_feedback.ko
 qcom-i2c-pmic.ko
 oplus_nfc.ko
 sg.ko
