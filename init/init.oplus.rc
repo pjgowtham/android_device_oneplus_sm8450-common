@@ -39,6 +39,9 @@ on property:ro.boot.prjname=*
     setprop ro.separate.soft ${ro.boot.prjname}
 
 on property:sys.boot_completed=1
+    # Charging
+    chown system system /dev/oplus_chg
+
     # Display
     copy /vendor/etc/Oplus_QC_LTM_SM8450_2021_10_12.pfm /mnt/vendor/persist/data/pfm/licenses/Oplus_QC_LTM_SM8450_2021_10_12.pfm
     copy /vendor/etc/Oplus_QC_LTM_SM8475_2022_07_05.pfm /mnt/vendor/persist/data/pfm/licenses/Oplus_QC_LTM_SM8475_2022_07_05.pfm
