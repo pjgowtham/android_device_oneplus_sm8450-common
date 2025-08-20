@@ -158,6 +158,7 @@ vendor/lib64/libsdsprpc.so
 system/lib64/libziparchive.so:odm/lib64/libziparchive_odm.so;FIX_SONAME
 
 # Charger
+odm/firmware/fastchg/charge_time_config.csv|e5bcc378513cb42bcb071eef327c87920553b0c4
 odm/firmware/fastchg/charging_thermal_config_default.txt
 vendor/etc/charger_fw_fstab.qti
 
