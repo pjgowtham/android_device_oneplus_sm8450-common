@@ -818,12 +818,6 @@ vendor/lib64/libFlacSwDec.so
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libdsd2pcm.so
 
-# Oplus performance
-odm/bin/hw/vendor-oplus-hardware-performance-V1-service
-odm/etc/init/vendor-oplus-hardware-performance-V1-service.rc
-odm/etc/vintf/manifest/manifest_performance_aidl.xml
-odm/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so
-
 # Oplus Log Core
 vendor/lib64/libolc_vnd.so
 vendor/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
