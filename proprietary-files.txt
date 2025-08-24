@@ -157,9 +157,14 @@ vendor/lib64/libsdsprpc.so
 # Camera
 system/lib64/libziparchive.so:odm/lib64/libziparchive_odm.so;FIX_SONAME
 
-# Charger
+# Charging
+odm/bin/hw/vendor.oplus.hardware.charger-V6-service
+odm/etc/init/vendor.oplus.hardware.charger-V6-service.rc
+odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
 odm/firmware/fastchg/charge_time_config.csv|e5bcc378513cb42bcb071eef327c87920553b0c4
 odm/firmware/fastchg/charging_thermal_config_default.txt
+odm/lib64/libGaiaClient_vnd.so
+odm/lib64/vendor.oplus.hardware.charger-V6-ndk_platform.so
 vendor/etc/charger_fw_fstab.qti
 
 # CNE
@@ -617,6 +622,17 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so;MODULE_SUFFIX=_vendor
 
+# Horae
+system/lib64/libostatslog.so:system_ext/lib64/libostatslog.so
+system/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so:system_ext/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so
+system_ext/bin/horae
+system_ext/etc/horae/horae.conf
+system_ext/etc/horae/horae_SM8450.conf
+system_ext/etc/horae/horae_SM8475.conf
+system_ext/etc/init/horae.rc
+system_ext/lib64/vendor.oplus.hardware.charger-V1-ndk.so
+system_ext/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
+
 # Hotword Enrollment
 my_product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml
 my_product/framework/com.android.hotwordenrollment.common.util.jar:product/framework/com.android.hotwordenrollment.common.util.jar
@@ -806,6 +822,9 @@ vendor/lib64/libdsd2pcm.so
 # Oplus Log Core
 vendor/lib64/libolc_vnd.so
 vendor/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
+
+# Oplus osense
+odm/lib64/libosenseaidlhalclient.so
 
 # PASR manager
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so

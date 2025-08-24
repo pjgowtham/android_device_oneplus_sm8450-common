@@ -157,6 +157,7 @@ oplus_chg.ko
 oplus_chg_v2.ko
 oplus_chg_symbol.ko
 qcom-spmi-temp-alarm.ko
+horae_shell_temp.ko
 qti-adc-tm.ko
 qti_qmi_sensor_v2.ko
 qti_qmi_cdev.ko
