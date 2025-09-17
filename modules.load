@@ -106,7 +106,6 @@ sim_detect.ko
 oem_qmi_client.ko
 oplus_gpio.ko
 qcom-i2c-pmic.ko
-oplus_nfc.ko
 sg.ko
 spi-msm-geni.ko
 spmi-pmic-arb-debug.ko
@@ -141,6 +140,7 @@ oplus_bsp_tp_custom.ko
 oplus_bsp_tp_comon.ko
 oplus_bsp_tp_notify.ko
 oplus_bsp_tp_tcm_oncell.ko
+oplus_bsp_tp_tcm_S3910.ko
 oplus_bsp_tp_syna_comnon.ko
 pm8941-pwrkey.ko
 qcom-hv-haptics.ko
