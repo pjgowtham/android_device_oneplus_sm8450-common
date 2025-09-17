@@ -330,14 +330,8 @@ odm/lib64/libpwirisservice.so
 odm/lib64/libpwirissoft.so
 odm/lib64/libpwsoftirisPCS.so
 odm/lib64/libsnapdragoncolor-pxlw.so
-odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
-odm/lib64/vendor.pixelworks.hardware.feature@1.1.so
 vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishalwrapper.so
-vendor/lib64/vendor.pixelworks.hardware.display@1.0.so
-vendor/lib64/vendor.pixelworks.hardware.display@1.1.so
-vendor/lib64/vendor.pixelworks.hardware.display@1.2.so
-vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display (SDM) - from ingot
 vendor/lib64/libdisplayskuutils.so|405e2456d79c8e0118efb9ade2d8a8d82565af5c
