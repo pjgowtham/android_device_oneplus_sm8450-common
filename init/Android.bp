@@ -80,6 +80,17 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.kernel.post_boot-cape.sh",
+    src: "init.kernel.post_boot-cape.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-taro.sh",
+    src: "init.kernel.post_boot-taro.sh",
+    vendor: true,
+}
+sh_binary {
     name: "init.qcom.sh",
     src: "init.qcom.sh",
     vendor: true,
