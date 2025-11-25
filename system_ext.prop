@@ -46,3 +46,10 @@ persist.vendor.sensors.enable.mag_filter=true
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
+
+# Blur GPU
+ro.sf.blurs_are_expensive=1
+
+# Power-saving props
+ro.vendor.use_data_netmgrd=true
+ro.ril.disable.power.collapse=0
