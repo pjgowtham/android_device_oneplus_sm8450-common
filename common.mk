@@ -119,6 +119,13 @@ PRODUCT_SYSTEM_PROPERTIES += \
     dalvik.vm.dex2oat-filter=everything \
     dalvik.vm.image-dex2oat-filter=everything
 
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep \
+    Settings \
+    SettingsGoogle \
+    SystemUI \
+    SystemUIGoogle
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
