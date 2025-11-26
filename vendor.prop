@@ -226,6 +226,9 @@ wifi.aware.interface=wifi-aware0
 # Zygote
 zygote.critical_window.minute=10
 
+# Netflix
+ro.netflix.bsp_rev=Q8450-34634-1
+
 # ================================================================
 # SurfaceFlinger & GPU / Rendering
 # ================================================================
