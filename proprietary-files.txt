@@ -246,12 +246,13 @@ odm/etc/PanelChaplin/Lut3D_312
 odm/etc/init/hw/init.oplus.display.rc
 odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc
 odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature_aidl.xml
+odm/etc/vintf/manifest/vintf_manifext_aidl_panelchaplin.xml
+odm/lib64/libPanelChaplin.so
 odm/lib64/libdpaservice.so
 vendor/bin/feature_enabler_client
 vendor/etc/init/feature_enabler_client.rc
 vendor/etc/2024-10-11_platform_RSA_SM8750_license_d07bab28-156e-49b6-9eda-103eb7c6f6de.pfm
 vendor/etc/platform_RSA_SM8750_license_c8338967-b56e-4693-ae1b-7a17ac371ff6.pfm
-vendor/lib64/libPanelChaplin.so
 
 # Display services
 vendor/bin/hw/vendor.qti.hardware.display.color-service
