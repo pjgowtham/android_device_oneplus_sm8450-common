@@ -95,3 +95,8 @@ sh_binary {
     src: "init.qcom.sh",
     vendor: true,
 }
+prebuilt_etc {
+    name: "fstab.zram",
+    src: "fstab.zram",
+    vendor: true,
+}

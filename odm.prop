@@ -25,7 +25,7 @@ persist.vendor.radio.poweron_opt=1
 persist.vendor.radio.stack_id_0=0
 persist.vendor.radio.stack_id_1=1
 ro.sys.reserve.integrate=true
-ro.vendor.oplus.radio.project=1
+ro.vendor.oplus.radio.project=2
 ro.vendor.oplus.radio.sar_regionmark=FCC
 
 # SVN
