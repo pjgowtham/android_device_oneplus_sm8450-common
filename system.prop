@@ -22,3 +22,5 @@ persist.log.tag.OpenGLRenderer=S
 persist.log.tag.ultrasound_extn=S
 persist.log.tag.minksocket=S
 persist.log.tag.QTIPowerHAL=S
+persist.sys.perf.scroll_opt = true
+persist.sys.perf.scroll_opt.heavy_app = 0
