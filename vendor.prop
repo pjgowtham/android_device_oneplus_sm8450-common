@@ -5,8 +5,6 @@ aaudio.mmap_policy=2
 af.fast_track_multiplier=1
 audio.offload.video=true
 persist.vendor.audio.avs.afe_api_version=2
-persist.vendor.audio.fluence.speaker=false
-persist.vendor.audio.fluence.voicecall=false
 persist.vendor.audio.ha_proxy.enabled=true
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
@@ -481,3 +479,14 @@ ro.vendor.perf.disable_user_hints=true
 # ScrollOptimizer
 persist.sys.perf.scroll_opt=true
 persist.sys.perf.scroll_opt.heavy_app=1
+
+persist.vendor.audio.sku=waipio_qrd
+persist.vendor.audio.calfile0=/vendor/etc/acdbdata/waipio_qrd/QRD_acdb_cal.acdb
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=true
+persist.vendor.audio.fluence.speaker=true
+persist.vendor.audio.fluence.mode=endfire
+persist.vendor.audio.nn.enabled=true
+persist.vendor.audio.nn.ns.enabled=true
+persist.vendor.audio.nn.vad.enabled=true
+persist.vendor.audio.nn.model.dir=/vendor/etc/acdbdata/nn_ns_models
