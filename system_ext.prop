@@ -5,9 +5,6 @@ persist.bluetooth.bqr.min_interval_ms=6000
 # Camera
 ro.camera.privileged.3rdpartyApp=com.aiunit.aon;
 
-# Display
-debug.sf.enable_hwc_vds=1
-
 # CNE
 persist.vendor.cne.feature=1
 
