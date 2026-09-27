@@ -75,6 +75,11 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('lseek: 1'),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V4-cpp.so', 'android.media.audio.common.types-V5-cpp.so'),
+    (
+        'vendor/bin/hw/vendor.qti.media.c2@1.0-service',
+        'vendor/bin/hw/vendor.qti.media.c2audio@1.0-service',
+    ): blob_fixup()
+        .binary_regex_replace(b'\x00\x21\x80\x52', b'\x00\x24\x80\x52'),
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'\n.*OPLUS_FEATURE_DSIPLAY[\s\S]*?OPLUS_FEATURE_DSIPLAY.*\n', ''),
     # Renumber the waipio QoS bandwidth limits for the pdx257 QoS parser.
