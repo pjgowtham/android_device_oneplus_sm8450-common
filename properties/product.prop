@@ -10,3 +10,7 @@ bluetooth.device_id.vendor_id=0x001D
 
 # GMS
 ro.opa.device_model_id=ga-oplus-skill-os121-211011
+
+# RKP
+remote_provisioning.enable_rkpd=true
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
