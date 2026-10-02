@@ -366,7 +366,6 @@ vendor/bin/init.qti.write.sh
 
 # Init - from pdx257 PDX268_GLOBALEEA-A4_USER_74.1.A.2.42
 vendor/bin/system_dlkm_modprobe.sh|21ec30926284577defb639ce512d9f5a1a0f72ac
-vendor/bin/vendor_modprobe.sh
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
