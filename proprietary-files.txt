@@ -413,7 +413,6 @@ vendor/lib64/libnsptransactionservice.so
 vendor/lib64/vendor.qti.hardware.hexlp-V1-ndk.so
 
 # Horae
-odm/etc/horae/horae_target.conf
 system/lib64/libostatslog.so:system_ext/lib64/libostatslog.so
 system_ext/bin/horae
 system_ext/etc/horae/horae.conf
