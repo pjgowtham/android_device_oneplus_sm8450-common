@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     lib_bt_aptx \
     lib_bt_ble \
-    lib_bt_bundle
+    lib_bt_bundle \
+    libbluetooth_audio_session_aidl_shim
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
