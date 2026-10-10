@@ -82,8 +82,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy': blob_fixup()
         .add_line_if_missing('sched_get_priority_min: 1')
         .add_line_if_missing('sched_get_priority_max: 1'),
-    'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
-        .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
     (
         'vendor/lib64/libVoiceSdk.so',
         'vendor/lib64/libcapiv2uvvendor.so',
@@ -98,8 +96,7 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(
             b'BluetoothAudioSession14GetAudioConfigEv',
             b'BluetoothAudioSession14GetAudioConfV4Ev',
-        )
-        .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
+        ),
     (
         'vendor/lib64/libhwcsensor.so',
         'vendor/lib64/libsdmclient.so',
