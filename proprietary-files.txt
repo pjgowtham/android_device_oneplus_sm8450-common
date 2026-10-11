@@ -158,13 +158,13 @@ vendor/lib64/libsdsprpc.so
 system/lib64/libziparchive.so:odm/lib64/libziparchive_odm.so;FIX_SONAME
 
 # Charging
-odm/bin/hw/vendor.oplus.hardware.charger-V6-service
-odm/etc/init/vendor.oplus.hardware.charger-V6-service.rc
+odm/bin/hw/vendor.oplus.hardware.charger-V10-service
+odm/etc/init/vendor.oplus.hardware.charger-V10-service.rc
 odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
 odm/firmware/fastchg/charge_time_config.csv|e5bcc378513cb42bcb071eef327c87920553b0c4
 odm/firmware/fastchg/charging_thermal_config_default.txt
 odm/lib64/libGaiaClient_vnd.so
-odm/lib64/vendor.oplus.hardware.charger-V6-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.charger-V10-ndk_platform.so
 vendor/etc/charger_fw_fstab.qti
 
 # CNE
@@ -320,8 +320,10 @@ vendor/lib64/libmemutils.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
+
+# Display (STC) - from ingot
+vendor/lib64/libsnapdragoncolor-manager.so
 
 # Display (Pixelworks)
 odm/bin/hw/vendor.pixelworks.hardware.display.iris-service
@@ -574,9 +576,7 @@ my_product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk:product/priv-ap
 
 # IMS
 system/lib64/vendor.qti.diaghal-V1-ndk.so:system_ext/lib64/vendor.qti.diaghal-V1-ndk.so
-system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
-system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/oplus-ims-ext.jar
@@ -751,8 +751,7 @@ vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libdsd2pcm.so
 
 # Oplus Log Core
-vendor/lib64/libolc_vnd.so
-vendor/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
+vendor/lib64/libolc_vnd.so;MODULE_SUFFIX=_vendor
 
 # Oplus osense
 odm/lib64/libosenseaidlhalclient.so
@@ -937,6 +936,10 @@ vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
+# QSPA
+system_ext/etc/init/qspa_system.rc
+system_ext/etc/qspa/qspa_default.rc
+
 # QSPM
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
@@ -1035,7 +1038,6 @@ vendor/lib64/qtiwakelock.so
 vendor/lib64/vendor.oplus.hardware.appradioaidl-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.communicationcenter-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.communicationcenter-V2-ndk_platform.so
-vendor/lib64/vendor.oplus.hardware.radio-V2-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
 vendor/lib64/vendor.qti.hardware.data.connectionfactory-V1-ndk_platform.so
@@ -1162,7 +1164,6 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
-vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Snapdragon Computer Vision Engine

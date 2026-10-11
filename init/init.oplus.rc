@@ -38,6 +38,12 @@ on property:ro.boot.prjname=*
     # Display
     setprop ro.separate.soft ${ro.boot.prjname}
 
+on property:ro.boot.vendor.qspa.modem=enabled
+    setprop persist.oplus.qspa.modem enabled
+
+on property:ro.boot.vendor.qspa.modem=disabled && property:persist.vendor.radio.virtualcomm=1
+    setprop persist.oplus.qspa.modem enabled
+
 on property:sys.boot_completed=1
     # Charging
     chown system system /dev/oplus_chg

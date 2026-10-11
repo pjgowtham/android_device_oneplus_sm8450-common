@@ -94,6 +94,7 @@ frpc-adsprpc.ko
 rdbg.ko
 lt9611uxc.ko
 msm_kgsl.ko
+zram.ko
 oplus_bsp_fw_update.ko
 oplus_bsp_ist_up.ko
 oplus_bsp_ist_down.ko
