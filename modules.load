@@ -72,6 +72,7 @@ qti_dmof_scmi.ko
 oplus_mm_kevent.ko
 oplus_mm_kevent_fb.ko
 oplus_trackpoint_report.ko
+oplus_mdmfeature.ko
 oplus_bsp_fpga_notify.ko
 qti-fixed-regulator.ko
 qcom-amoled-regulator.ko

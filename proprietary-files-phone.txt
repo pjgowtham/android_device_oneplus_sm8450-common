@@ -328,11 +328,13 @@ vendor/bin/rmt_storage
 vendor/etc/init/vendor.qti.rmt_storage.rc
 
 # RIL
+odm/bin/hw/mdm_feature
 odm/bin/hw/subsys_daemon
 odm/bin/commcenterd
 odm/bin/init.subsys.sh
 odm/etc/init/commcenterd.rc
 odm/etc/init/init.network.rc
+odm/etc/init/mdm_feature.rc
 odm/etc/init/subsys_daemon.rc
 odm/etc/vintf/manifest/device_manifest_communication_center_aidl.xml
 odm/etc/vintf/manifest/device_manifest_subsys.xml
