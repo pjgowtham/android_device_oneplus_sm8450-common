@@ -369,6 +369,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/sun/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+$(call soong_config_set,qtipower,mode_ext_lib,power-ext-oplus)
+
 # QSPA
 PRODUCT_PACKAGES += \
     qspa_vendor.rc \
