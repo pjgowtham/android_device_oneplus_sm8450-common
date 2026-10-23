@@ -92,8 +92,8 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/sm8750
 TARGET_KERNEL_ADDITIONAL_FLAGS := CONFIG_OPLUS_DEVICE_DTBS=y
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
-    vendor/sun_perf.config \
-    vendor/oplus/sun_perf.config
+    vendor/waipio_perf.config \
+    vendor/oplus/waipio_perf.config
 
 # Kernel modules
 BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.load.system_dlkm))
