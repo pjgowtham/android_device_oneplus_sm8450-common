@@ -89,7 +89,10 @@ BOARD_KERNEL_IMAGE_NAME := Image
 
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8750
 
-TARGET_KERNEL_ADDITIONAL_FLAGS := CONFIG_OPLUS_DEVICE_DTBS=y
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    CONFIG_BTFM_SLIM=m \
+    CONFIG_I2C_RTC6226_QCA=m \
+    CONFIG_MSM_BT_POWER=m
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/waipio_perf.config \
@@ -97,15 +100,13 @@ TARGET_KERNEL_CONFIG := \
 
 # Kernel modules
 BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.load.system_dlkm))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.vendor_blocklist.msm.sun
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.vendor_blocklist.msm.waipio
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE)
-# qrtr-gunyah.ko is detected by depmod of build_utils.sh in kleaf
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
-    $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.list.msm.sun)) \
-    qrtr-gunyah.ko
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.list.msm.waipio))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
+TARGET_AUTO_COLLECT_KERNEL_MODULE_DEPS := true
 SYSTEM_KERNEL_MODULES := \
     $(BOARD_SYSTEM_KERNEL_MODULES_LOAD) \
     $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.kunit))
@@ -121,7 +122,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/securemsm-kernel \
     qcom/opensource/synx-kernel \
     qcom/opensource/camera-kernel \
-    qcom/opensource/data-kernel/drivers/smem-mailbox \
     qcom/opensource/datarmnet-ext/mem \
     qcom/opensource/dataipa/drivers/platform/msm \
     qcom/opensource/datarmnet/core \
@@ -135,12 +135,9 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/display-drivers/msm \
     qcom/opensource/dsp-kernel \
     qcom/opensource/eva-kernel \
-    qcom/opensource/graphics-kernel \
-    qcom/opensource/spu-kernel \
     qcom/opensource/video-driver \
     qcom/opensource/wlan/platform \
-    qcom/opensource/wlan/qcacld-3.0/.peach_v2 \
-    qcom/opensource/wlan/qcacld-3.0/.wcn7750 \
+    qcom/opensource/wlan/qcacld-3.0/.qca6490 \
     qcom/opensource/bt-kernel \
     nxp/opensource/driver
 

@@ -33,6 +33,8 @@ wwan.ko
 pps_core.ko
 ptp.ko
 cdc-acm.ko
+xhci-pci.ko
+xhci-pci-renesas.ko
 usbmon.ko
 ftdi_sio.ko
 usbserial.ko
