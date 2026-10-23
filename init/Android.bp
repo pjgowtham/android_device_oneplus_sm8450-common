@@ -75,14 +75,14 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.kernel.post_boot-sun.sh",
-    src: "init.kernel.post_boot-sun.sh",
+    name: "init.kernel.post_boot-cape.sh",
+    src: "init.kernel.post_boot-cape.sh",
     vendor: true,
 }
 
 sh_binary {
-    name: "init.kernel.post_boot-sun_default_6_2.sh",
-    src: "init.kernel.post_boot-sun_default_6_2.sh",
+    name: "init.kernel.post_boot-taro.sh",
+    src: "init.kernel.post_boot-taro.sh",
     vendor: true,
 }
 
@@ -101,5 +101,11 @@ sh_binary {
 sh_binary {
     name: "init.qti.media.sh",
     src: "init.qti.media.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot.sh",
+    src: "init.kernel.post_boot.sh",
     vendor: true,
 }
