@@ -70,6 +70,9 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
+ifeq ($(TARGET_USES_KERNEL_6_6),true)
+include $(COMMON_PATH)/kernel/6.6/BoardConfigKernel.mk
+else
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8450
 TARGET_KERNEL_CONFIG := gki_defconfig vendor/waipio_GKI.config vendor/oplus_GKI.config vendor/debugfs.config
 
@@ -98,6 +101,8 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/eva-kernel \
     qcom/opensource/video-driver \
     qcom/opensource/wlan/qcacld-3.0/.qca6490
+
+endif
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
