@@ -400,13 +400,8 @@ case "$target" in
     "holi")
         setprop vendor.media.target_variant "_holi"
         ;;
-    "sun")
+    "taro" | "cape")
         setprop vendor.display.supports_background_blur 1
-        case "$soc_hwid" in
-            655|681|659|694|686)
-                setprop vendor.display.supports_background_blur 0
-                ;;
-        esac
         ;;
 esac
 
