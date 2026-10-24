@@ -68,7 +68,6 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.hypervisor.protected_vm.supported=true \
-    androidboot.load_modules_parallel=true \
     androidboot.memcg=1 \
     androidboot.serialconsole=0 \
     androidboot.usbcontroller=a600000.dwc3 \
@@ -88,6 +87,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8750
+TARGET_KERNEL_VERSION := 6.6
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     CONFIG_BTFM_SLIM=m \

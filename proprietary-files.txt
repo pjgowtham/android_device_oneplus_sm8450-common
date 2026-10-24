@@ -14,19 +14,6 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
 
 # ADSP modules
-odm/lib/rfsa/adsp/aiboost/signed/libQnnHtpV79Skel.so
-odm/lib/rfsa/adsp/aiboost/signed/libaiboostubwc_skel.so
-odm/lib/rfsa/adsp/capi_v3_oprec.so
-odm/lib/rfsa/adsp/libCalculator_skel.so
-odm/lib/rfsa/adsp/libQnnHtpV79.so
-odm/lib/rfsa/adsp/libQnnHtpV79Skel.so
-odm/lib/rfsa/adsp/libQnnSaver.so
-odm/lib/rfsa/adsp/libSuperRawPost_skel.so
-odm/lib/rfsa/adsp/libarc_gk_pt_hvx_skel.so
-odm/lib/rfsa/adsp/libarc_htp_driver_skel.so
-odm/lib/rfsa/adsp/libhvxFaceBeautyPre_skel.so
-odm/lib/rfsa/adsp/libktveffect.so
-odm/lib/rfsa/adsp/nlc_bgth_v1_5.so
 vendor/lib/rfsa/adsp/chre_qsh_shim.so
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
@@ -306,35 +293,6 @@ vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
 
 # EVA firmware
-vendor/firmware/evass.b00
-vendor/firmware/evass.b01
-vendor/firmware/evass.b02
-vendor/firmware/evass.b03
-vendor/firmware/evass.b04
-vendor/firmware/evass.b05
-vendor/firmware/evass.b06
-vendor/firmware/evass.b07
-vendor/firmware/evass.b08
-vendor/firmware/evass.b09
-vendor/firmware/evass.b10
-vendor/firmware/evass.b11
-vendor/firmware/evass.b12
-vendor/firmware/evass.b13
-vendor/firmware/evass.b14
-vendor/firmware/evass.b15
-vendor/firmware/evass.b16
-vendor/firmware/evass.b17
-vendor/firmware/evass.b18
-vendor/firmware/evass.b19
-vendor/firmware/evass.mbn
-vendor/firmware/evass.mdt
-
-# Face unlock
-odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service_uff
-odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc
-odm/etc/vintf/manifest/manifest_oplus_face.xml
-odm/lib64/libstfaceunlockocl_uff.so;DUMMY_SHARED_LIB
-odm/init.oplus.face.rc
 
 # FASTCV
 vendor/lib64/libfastcvdsp_stub.so
@@ -377,10 +335,7 @@ vendor/firmware/gen80000_gmu.bin
 vendor/firmware/gen80000_sqe.fw
 vendor/firmware/gen80000_zap.mbn
 vendor/firmware/gmu_gen70900.bin
-vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
-vendor/gpu/kbc/unified_kbcs_64.bin
-vendor/gpu/kbc/unified_ksqs.bin
 
 # Graphics (Vulkan)
 vendor/lib64/hw/vulkan.adreno.so
@@ -917,7 +872,6 @@ vendor/lib64/libtrustedapploader.so
 # WiFi
 odm/bin/init.oplus.wifi.sh
 odm/etc/init/hw/init.oplus.wifi.rc
-odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 vendor/bin/cnss-daemon
 vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf

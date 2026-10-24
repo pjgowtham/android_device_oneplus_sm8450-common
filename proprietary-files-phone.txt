@@ -146,8 +146,6 @@ odm/etc/init/esim@1.0-service.rc
 odm/etc/vintf/manifest/manifest_oplus_esim.xml
 
 # Fingerprint
-odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff
-odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v3.xml
 
 # Fingerprint Pay
