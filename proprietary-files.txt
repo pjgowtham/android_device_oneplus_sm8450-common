@@ -14,19 +14,6 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
 
 # ADSP modules
-odm/lib/rfsa/adsp/aiboost/signed/libQnnHtpV79Skel.so
-odm/lib/rfsa/adsp/aiboost/signed/libaiboostubwc_skel.so
-odm/lib/rfsa/adsp/capi_v3_oprec.so
-odm/lib/rfsa/adsp/libCalculator_skel.so
-odm/lib/rfsa/adsp/libQnnHtpV79.so
-odm/lib/rfsa/adsp/libQnnHtpV79Skel.so
-odm/lib/rfsa/adsp/libQnnSaver.so
-odm/lib/rfsa/adsp/libSuperRawPost_skel.so
-odm/lib/rfsa/adsp/libarc_gk_pt_hvx_skel.so
-odm/lib/rfsa/adsp/libarc_htp_driver_skel.so
-odm/lib/rfsa/adsp/libhvxFaceBeautyPre_skel.so
-odm/lib/rfsa/adsp/libktveffect.so
-odm/lib/rfsa/adsp/nlc_bgth_v1_5.so
 vendor/lib/rfsa/adsp/chre_qsh_shim.so
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
