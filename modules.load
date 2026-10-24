@@ -259,8 +259,7 @@ oplus_sensor_interact.ko
 oplus_sensor_ir_core.ko
 oplus_sensor_kookong_ir_spi.ko
 thermal_pa_adc.ko
-qca_cld3_peach_v2.ko
-qca_cld3_wcn7750.ko
+qca_cld3_qca6490.ko
 cnss2.ko
 icnss2.ko
 cnss_plat_ipc_qmi_svc.ko
@@ -361,7 +360,6 @@ oplus_audio_pa_manager.ko
 oplus_audio_aw87xxx.ko
 oplus_audio_daemon.ko
 oplus_audio_netlink.ko
-smem-mailbox.ko
 qcedev-mod_dlkm.ko
 qcrypto-msm_dlkm.ko
 qce50_dlkm.ko
@@ -375,8 +373,7 @@ radio-i2c-rtc6226-qca.ko
 btfmcodec.ko
 btfm_slim_codec.ko
 bt_fm_swr.ko
-qca_cld3_peach_v2.ko
-qca_cld3_wcn7750.ko
+qca_cld3_qca6490.ko
 cnss2.ko
 icnss2.ko
 cnss_plat_ipc_qmi_svc.ko
@@ -483,7 +480,6 @@ btfmcodec.ko
 btfm_slim_codec.ko
 bt_fm_swr.ko
 camera.ko
-smem-mailbox.ko
 gsim.ko
 ipam.ko
 ipanetm.ko

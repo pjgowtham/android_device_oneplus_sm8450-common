@@ -121,7 +121,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/securemsm-kernel \
     qcom/opensource/synx-kernel \
     qcom/opensource/camera-kernel \
-    qcom/opensource/data-kernel/drivers/smem-mailbox \
     qcom/opensource/datarmnet-ext/mem \
     qcom/opensource/dataipa/drivers/platform/msm \
     qcom/opensource/datarmnet/core \
@@ -139,8 +138,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/spu-kernel \
     qcom/opensource/video-driver \
     qcom/opensource/wlan/platform \
-    qcom/opensource/wlan/qcacld-3.0/.peach_v2 \
-    qcom/opensource/wlan/qcacld-3.0/.wcn7750 \
+    qcom/opensource/wlan/qcacld-3.0/.qca6490 \
     qcom/opensource/bt-kernel \
     nxp/opensource/driver
 
