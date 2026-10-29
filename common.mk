@@ -46,11 +46,8 @@ PRODUCT_PACKAGES += \
     libaudio_aidl_conversion_common_ndk \
     libaudiochargerlistener \
     libbatterylistener \
-    libcustomva_intf \
     libfmpal \
     libhfp_pal \
-    libhotword_intf \
-    libpaleventnotifier \
     libpalipcservice \
     libqcompostprocbundle \
     libqcomvisualizer \
@@ -80,7 +77,7 @@ PRODUCT_PACKAGES += \
     libmediautils_vendor.vendor \
     libmemunreachable.vendor
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8750/audio/primary-hal
+AUDIO_HAL_DIR := hardware/qcom-caf/sm8450-6.6/audio/primary-hal
 # Share the AIDL service configuration while retaining Taro hardware definitions.
 CONFIG_AIDL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/sun
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/taro
