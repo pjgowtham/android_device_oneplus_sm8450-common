@@ -87,7 +87,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 
-TARGET_KERNEL_SOURCE := kernel/oneplus/sm8750
+TARGET_KERNEL_SOURCE := kernel/oneplus/sm8450
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := CONFIG_OPLUS_DEVICE_DTBS=y
 TARGET_KERNEL_CONFIG := \
@@ -110,7 +110,7 @@ SYSTEM_KERNEL_MODULES := \
     $(BOARD_SYSTEM_KERNEL_MODULES_LOAD) \
     $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.kunit))
 
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/oneplus/sm8750-modules
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/oneplus/sm8450-modules
 TARGET_KERNEL_EXT_MODULES := \
     oplus/kernel/device_info/oplus_fpga/fpga_monitor:kbuild \
     qcom/opensource/mmrm-driver \
