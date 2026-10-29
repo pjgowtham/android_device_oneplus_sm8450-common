@@ -68,7 +68,6 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.hypervisor.protected_vm.supported=true \
-    androidboot.load_modules_parallel=true \
     androidboot.memcg=1 \
     androidboot.serialconsole=0 \
     androidboot.usbcontroller=a600000.dwc3 \
