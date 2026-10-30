@@ -53,6 +53,8 @@ BOARD_RAMDISK_USE_LZ4 := true
 # DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
+# Only the base DTBs, ABL applies the DTBO on top of them.
+TARGET_MERGE_DTBS_WILDCARD := *[!y]
 TARGET_NEEDS_DTBOIMAGE := true
 
 # Properties
