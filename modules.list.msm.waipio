@@ -4,8 +4,6 @@ arm_smmu.ko
 gic_intr_routing.ko
 iommu-logger.ko
 phy-qcom-ufs.ko
-phy-qcom-ufs-qmp-v4-niobe.ko
-phy-qcom-ufs-qmp-v4-cape.ko
 phy-qcom-ufs-qmp-v4-waipio.ko
 phy-qcom-ufs-qrbtc-sdm845.ko
 llcc-qcom.ko
@@ -27,8 +25,6 @@ qcom-dload-mode.ko
 pinctrl-msm.ko
 pinctrl-waipio.ko
 qti_thermal_vendor_hooks.ko
-pinctrl-tuna.ko
-pinctrl-kera.ko
 qcom_tsens.ko
 qcom_dma_heaps.ko
 qcom_iommu_util.ko
@@ -52,19 +48,11 @@ nvmem_qcom-spmi-sdam.ko
 rtc-pm8xxx.ko
 pmic-pon-log.ko
 gcc-waipio.ko
-gcc-tuna.ko
-gcc-kera.ko
-gpucc-kera.ko
 gpucc-waipio.ko
-gpucc-tuna.ko
 secure_buffer.ko
 dispcc-waipio.ko
-dispcc-tuna.ko
-camcc-kera.ko
 camcc-waipio.ko
-camcc-tuna.ko
 stub-regulator.ko
-tcsrcc-tuna.ko
 sg.ko
 gdsc-regulator.ko
 cqhci.ko
@@ -83,10 +71,8 @@ qcom-dcvs.ko
 qcom_llcc_pmu.ko
 qcom-pmu-lib.ko
 qcom-ipcc.ko
-qnoc-kera.ko
 qnoc-qos.ko
 qnoc-waipio.ko
-qnoc-tuna.ko
 qcom_ipc_logging.ko
 qcom_hwspinlock.ko
 qrtr.ko
@@ -101,7 +87,6 @@ gh_msgq.ko
 gh_rm_drv.ko
 gunyah_loader.ko
 mdt_loader.ko
-cambistmclkcc-tuna.ko
 videocc-waipio.ko
 clk-rpmh.ko
 crm-v2.ko
