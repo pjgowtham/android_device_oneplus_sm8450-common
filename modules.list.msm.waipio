@@ -4,6 +4,7 @@ arm_smmu.ko
 iommu-logger.ko
 phy-qcom-ufs.ko
 phy-qcom-ufs-qmp-v4-waipio.ko
+phy-qcom-ufs-qmp-v4-cape.ko
 llcc-qcom.ko
 mem_buf.ko
 mem_buf_dev.ko
@@ -71,6 +72,7 @@ qcom_aoss.ko
 msm_qmp.ko
 ufshcd-crypto-qti.ko
 qcom_ice.ko
+tmecom-intf.ko
 ufs_qcom.ko
 gh_arm_drv.ko
 gh_dbl.ko
