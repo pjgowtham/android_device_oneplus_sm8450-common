@@ -108,7 +108,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/audio-kernel \
     qcom/opensource/securemsm-kernel \
-    qcom/opensource/synx-kernel \
+    qcom/opensource/synx-kernel-v1 \
     qcom/opensource/camera-kernel \
     qcom/opensource/datarmnet-ext/mem \
     qcom/opensource/dataipa/drivers/platform/msm \
@@ -122,7 +122,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/display-drivers/msm \
     qcom/opensource/dsp-kernel \
-    qcom/opensource/eva-kernel \
+    qcom/opensource/eva-kernel-v1 \
     qcom/opensource/graphics-kernel \
     qcom/opensource/spu-kernel \
     qcom/opensource/video-driver \
