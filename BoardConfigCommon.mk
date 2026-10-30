@@ -65,21 +65,11 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/properties/vendor.prop
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Kernel
-BOARD_BOOTCONFIG := \
+BOARD_BOOTCONFIG:= \
     androidboot.hardware=qcom \
-    androidboot.hypervisor.protected_vm.supported=true \
     androidboot.memcg=1 \
-    androidboot.serialconsole=0 \
     androidboot.usbcontroller=a600000.dwc3 \
-    androidboot.vendor.qspa=true
-
-BOARD_KERNEL_CMDLINE := \
-    console=ttynull \
-    log_buf_len=2M \
-    nohugevmalloc \
-    nosoftlockup \
-    qcom_geni_serial.con_enabled=0 \
-    sysctl.kernel.firmware_config.force_sysfs_fallback=1
+    androidboot.selinux=permissive
 
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_BASE := 0x00000000
