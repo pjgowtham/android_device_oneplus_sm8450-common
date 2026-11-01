@@ -724,7 +724,7 @@ vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/sns_reg_config
 
 # SMC Invoke
-vendor/lib64/libminkdescriptor.so
+vendor/lib64/libminkdescriptor.so|29051d50c80caa4e97184a6a9b4beecbfec2d5a2
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
 
