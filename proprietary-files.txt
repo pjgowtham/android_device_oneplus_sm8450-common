@@ -379,9 +379,7 @@ vendor/etc/msm_irqbalance.conf
 
 # Keymaster
 vendor/bin/KmInstallKeybox
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/bin/hw/android.hardware.security.keymint-service-qti
-vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libkeymasterdeviceutils.so
