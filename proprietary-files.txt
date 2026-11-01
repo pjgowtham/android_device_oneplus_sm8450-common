@@ -338,7 +338,7 @@ vendor/lib64/libllvm-qcom.so|69b8dbdca25440a1ad371befc9458535a5c85d52
 vendor/lib64/libllvm-qgl.so|5ed354f006321f5199f24fbd2e821a9a3a2e45b4
 
 # Graphics (Vulkan) - from pdx257 PDX268_GLOBALEEA-A4_USER_74.1.A.2.42
-vendor/lib64/hw/vulkan.adreno.so|977aa3028dbbb67f2c15ccb5574e6ed11559df9c
+vendor/lib64/hw/vulkan.adreno.so|977aa3028dbbb67f2c15ccb5574e6ed11559df9c|c4b27e8bf97aa8b7fe8ba76ef1e426532420ef46
 
 # Horae
 system/lib64/libostatslog.so:system_ext/lib64/libostatslog.so
