@@ -484,7 +484,6 @@ vendor/lib64/libolc_vnd.so;MODULE_SUFFIX=_vendor
 odm/lib64/libosenseaidlhalclient.so
 
 # PD
-vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 

@@ -11,6 +11,7 @@ bam_dma.ko
 msm_gpi.ko
 pdr_interface.ko
 qcom_pdr_msg.ko
+qcom_pd_mapper.ko
 qmi_helpers.ko
 heap_mem_ext_v01.ko
 msm_memshare.ko
