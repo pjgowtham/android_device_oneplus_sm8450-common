@@ -85,6 +85,7 @@ BOARD_KERNEL_CMDLINE := \
     nohugevmalloc \
     nosoftlockup \
     qcom_geni_serial.con_enabled=0 \
+    scsi_mod.scan=sync \
     sysctl.kernel.firmware_config.force_sysfs_fallback=1
 
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
