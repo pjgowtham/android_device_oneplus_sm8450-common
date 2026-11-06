@@ -43,5 +43,8 @@ on fs
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro context=u:object_r:firmware_file:s0
 
+on property:dev.mnt.blk.firmware=*
+    write /sys/kernel/boot_adsp/boot 1
+
 on property:init.svc.fastbootd=running
     umount /firmware
