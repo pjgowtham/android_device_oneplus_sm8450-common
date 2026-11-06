@@ -516,4 +516,4 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/sm8750-common/sm8750-common-vendor.mk)
+$(call inherit-product, vendor/oneplus/sm8450-common/sm8450-common-vendor.mk)
