@@ -43,7 +43,6 @@ vendor_dlkm                                             /vendor_dlkm           e
 system_dlkm                                             /system_dlkm           erofs   ro                                                   wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 odm                                                     /odm                   erofs   ro                                                   wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 /dev/block/by-name/boot                                 /boot                  emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
-/dev/block/by-name/init_boot                            /init_boot             emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/vendor_boot                          /vendor_boot           emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/dtbo                                 /dtbo                  emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/recovery                             /recovery              emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
