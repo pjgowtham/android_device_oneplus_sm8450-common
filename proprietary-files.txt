@@ -10,11 +10,11 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 
 # ADSP
-vendor/bin/adsprpcd
+vendor/bin/adsprpcd|1d209eb778ea00b5224bece714bcb6ee1070fd7c
 vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
 vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libadsprpc.so
+vendor/lib64/libadsprpc.so|b0ad6492fc650d793b90c3ee505f8678c1b6bab2
 vendor/lib64/libloadalgo_stub.so
 
 # ADSP modules
@@ -155,12 +155,12 @@ vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 
 # CDSP
-vendor/bin/cdsprpcd
+vendor/bin/cdsprpcd|d4a649fdee9a2384da1599fc1eb33708aa174f59
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libcdsprpc.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
+vendor/lib64/libcdsprpc.so|d5ae903f995aed8b87ba1f0e66ed823f81557f29
+vendor/lib64/libmdsprpc.so|5e6ba6ba1990147dcf555c0c9830d245b697aeb7
+vendor/lib64/libsdsprpc.so|f7b35ea78045cc2b864a60fdd0c368b41faec930
 
 # Charger
 vendor/etc/charger_fw_fstab.qti
@@ -214,34 +214,34 @@ odm/lib64/libsnapdragoncolor-pxlw.so
 vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishalwrapper.so
 
-# Display (SDM)
-vendor/etc/display/camera_alignments.json
-vendor/etc/display/cpu_alignments.json
-vendor/etc/display/default_alignments.json
-vendor/etc/display/display_alignments.json
-vendor/etc/display/formats.json
-vendor/etc/display/graphics_alignments.json
-vendor/etc/display/ubwc_alignments.json
-vendor/etc/display/video_alignments.json
-vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libdpps.so
-vendor/lib64/libhdr_tm.so
-vendor/lib64/libintervmipc.so
-vendor/lib64/libqdcm-algo.so
-vendor/lib64/libqdcm-json-mode-parser.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libvmfilexfer.so
+# Display (SDM) - from pdx257 PDX268_GLOBALEEA-A4_USER_74.1.A.2.42
+vendor/etc/display/camera_alignments.json|41e88f386e5afacd59747f4221f8caa6fe4da4cb
+vendor/etc/display/cpu_alignments.json|0344679651b634807465759a46f49a0ff71322d7
+vendor/etc/display/default_alignments.json|7613cc249f1499da40e1c5fbe805a53a41d6533e
+vendor/etc/display/display_alignments.json|1e9b7554dcfb9846cc1b29c3ea55303e10b0c670
+vendor/etc/display/formats.json|c5746a4b038fecb6fa0e795ecec2919e1df125ea
+vendor/etc/display/graphics_alignments.json|057a121f203fd295014e06863dff43586227ffdb
+vendor/etc/display/ubwc_alignments.json|7ee10dc2512caae4068dfb974e88e74164eb4097
+vendor/etc/display/video_alignments.json|1da7a17e680a77d447d906cda9c3701017b1a3fc
+vendor/lib64/libdigital-dimming.so|b71804db676b9a35d07dd119caa2efb3715ae825
+vendor/lib64/libdisp-aba.so|43d989e8bc62d78180fcf37ee64b3d78fa11eb84
+vendor/lib64/libdisplayqos.so|efd8df7eb08e496a474e9cc10e7fe68a3176880d|cc1ad235f3f900c4a07d51f8f1e360ad668cec5e
+vendor/lib64/libdisplayskuutils.so|c1fa7912f6b45ad24a7cd15a65d96b2f2c9bbe27
+vendor/lib64/libdpps.so|8caa481b56345361c5164e607f59bb2e961b667b
+vendor/lib64/libhdr_tm.so|f646ac9a8902bde6607bdeb486d6eb4c681f8793
+vendor/lib64/libintervmipc.so|d19fa046b1415149c6d030af348716a8a7312b3c
+vendor/lib64/libqdcm-algo.so|62f2dfecd825f38a9cc8be6e0af04d31251fb5de
+vendor/lib64/libqdcm-json-mode-parser.so|64427f72400ac8c14430543fd350bc41bb41b385
+vendor/lib64/libqdcm-mode-parser.so|531f1e420c063693fec17e705e71faa9a9b9a281
+vendor/lib64/libsdm-color.so|45d9bde2d291ac2b0de19b66bf3fb58e33e5f3b3
+vendor/lib64/libsdm-colormgr-algo.so|152390eb5b1b0445278ab85ee167133d97334223
+vendor/lib64/libsdm-disp-vndapis.so|c9bb27f856ec09eb43a694d6fe6639a0844b691b
+vendor/lib64/libsdmextension.so|9013247fdf3905cc8c0d0c424391a9851fe8b08b
+vendor/lib64/libsnapdragoncolor-manager.so|2893cbf19668d65ad8f946b345fec5f5f3635842
+vendor/lib64/libsnapdragoncolor-qdcm.so|d43faa4aafe8b18afc37ee397473f92404959f84
+vendor/lib64/libtestutils.so|926f960499300aa340162f4fc89478d7322c1242
+vendor/lib64/libtinyxml2_1.so|e054691a996e61a8e1355a66eee1d941f9a96a95
+vendor/lib64/libvmfilexfer.so|ebb49c51fe7184a0d74a1fb020094dfaafc006dd
 
 # Display (SDM)
 vendor/etc/display/DPU660.xml
@@ -304,11 +304,11 @@ vendor/firmware/dpAP_modemssr.mbn
 vendor/firmware/dpMSA.mbn
 
 # DSP
-vendor/bin/dspservice
-vendor/etc/init/vendor.qti.hardware.dsp-service.rc
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
-vendor/etc/vintf/manifest/vendor.qti.hardware.dsp-service.xml
-vendor/lib64/vendor.qti.hardware.dsp-V1-ndk.so
+vendor/bin/dspservice|400c1e82a56552d60ec5cbc2f5f0950fcee516cf
+vendor/etc/init/vendor.qti.hardware.dsp-service.rc|8cf97beaec8309796cf3003aed6e52baa42cc8ba
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|cacb134fab84cb55f607fcff11b80481e2a8114d
+vendor/etc/vintf/manifest/vendor.qti.hardware.dsp-service.xml|c02c767856a1e8ef25441f3e0243487ac3829367
+vendor/lib64/vendor.qti.hardware.dsp-V1-ndk.so|cdf78fd543aa541925a3a4232221bbe1ae0bcb74
 
 # EVA
 vendor/lib64/libcv_common.so
@@ -324,30 +324,30 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
-# Graphics (Adreno)
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
-vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
-vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libOpenCL_adreno.so
+# Graphics (Adreno) - from pdx257 PDX268_GLOBALEEA-A4_USER_74.1.A.2.42
+vendor/lib64/egl/eglSubDriverAndroid.so|3259cef7915c9ca5cb3ae8ee394aef342da52ebd
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|4b455fe4aac4744015efb7bdd5b7b57665d44060
+vendor/lib64/egl/libGLESv1_CM_adreno.so|b90dccd16cba0ea30386e7320d5a3614a4da01e7
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|b2228ba8e38fff3c1672169d73e68a001bc9ed4c
+vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|f71a55f967d2058b02eaf816a5e1f977f1b0ade8
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|30dff441ef818843588260a973793198b656859c
+vendor/lib64/egl/libq3dtools_esx.so|cd4f1614ca84f69d18b47b0e6700d144817649c3
+vendor/lib64/libCB.so|9e517d1c738139781b75c3e815737a054f54d508
+vendor/lib64/libOpenCL.so|8dfb387e215706c692884bbcd5e1b14cc83e4b5f
+vendor/lib64/libOpenCL_adreno.so|05d6e9bc0b4b52f20af05752e4bb7a6b64410563
 vendor/lib64/libadreno_app_profiles.so
-vendor/lib64/libadreno_compiler_cl.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libgpudataproducer.so
-vendor/lib64/libgsl.so
-vendor/lib64/libkcl.so
-vendor/lib64/libkernelmanager.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libllvm-qgl.so
+vendor/lib64/libadreno_compiler_cl.so|b3e4011d60a78c4078a16a2e064c59064ebb4d94
+vendor/lib64/libadreno_utils.so|9347f1174b1963ccfe21d8c679c52e7b462eca7f
+vendor/lib64/libgpudataproducer.so|003f5ad15ec3e1ad015d181b2f12736878c65507
+vendor/lib64/libgsl.so|a6fc5f72156560c0f0638ad7b06404eff671f306
+vendor/lib64/libkcl.so|9528877155984e14128e9daf58a0515307a3eba0
+vendor/lib64/libkernelmanager.so|a9825b038720adef27d6072a89e5c8424dcec499
+vendor/lib64/libllvm-glnext.so|45d6b85606f56d59d3320748409f98fd1d324a08
+vendor/lib64/libllvm-qcom.so|69b8dbdca25440a1ad371befc9458535a5c85d52
+vendor/lib64/libllvm-qgl.so|5ed354f006321f5199f24fbd2e821a9a3a2e45b4
 
-# Graphics (Vulkan)
-vendor/lib64/hw/vulkan.adreno.so
+# Graphics (Vulkan) - from pdx257 PDX268_GLOBALEEA-A4_USER_74.1.A.2.42
+vendor/lib64/hw/vulkan.adreno.so|977aa3028dbbb67f2c15ccb5574e6ed11559df9c
 
 # Horae
 system/lib64/libostatslog.so:system_ext/lib64/libostatslog.so
@@ -650,7 +650,7 @@ odm/lib64/vendor.oplus.hardware.oplusSensor-V1-ndk_platform.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
-vendor/bin/sscrpcd
+vendor/bin/sscrpcd|b11e792503ec30b0cc64cd752b78ce211d1f323d
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
