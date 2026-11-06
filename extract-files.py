@@ -80,9 +80,21 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'-e "zram" -e "zsmalloc"', ''),
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'\n.*OPLUS_FEATURE_DSIPLAY[\s\S]*?OPLUS_FEATURE_DSIPLAY.*\n', ''),
+    # Renumber the waipio QoS bandwidth limits for the pdx257 QoS parser.
+    'vendor/etc/display/DPU8__.xml': blob_fixup()
+        .regex_replace(r'\n[ \t]*<Param6[2-6]>[^<]*</Param6[2-6]>', '')
+        .regex_replace(
+            r'(<Param61>[^<]*</Param61>)',
+            r'\1\n  <Param70>18200000</Param70>\n  <Param71>13600000</Param71>'
+            r'\n  <Param72>18200000</Param72>\n  <Param73>13600000</Param73>'
+            r'\n  <Param76>3900</Param76>\n  <Param77>3900</Param77>',
+        ),
     'vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy': blob_fixup()
         .add_line_if_missing('sched_get_priority_min: 1')
         .add_line_if_missing('sched_get_priority_max: 1'),
+    'vendor/lib64/libdisplayqos.so': blob_fixup()
+        .binary_regex_replace(b'\x68\x00\xb0\x52', b'\x28\x00\xb0\x52') # hw version 0x80030000 -> 0x80010000
+        .binary_regex_replace(rb'DPU830\.xml', b'DPU8__.xml'),
     (
         'vendor/lib64/libhwcsensor.so',
         'vendor/lib64/libsdmclient.so',
@@ -119,9 +131,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('android.hardware.security.rkp-V1-ndk.so'),
     ('vendor/lib64/libqcrilNr.so', 'vendor/lib64/libril-db.so'): blob_fixup()
         .binary_regex_replace(rb'persist\.vendor\.radio\.poweron_opt', rb'persist.vendor.radio.poweron_ign'),
-    # The display XML parsers use the Android 14 tinyxml2 XMLDocument layout.
-    ('vendor/lib64/libdpps.so', 'vendor/lib64/libsnapdragoncolor-manager.so'): blob_fixup()
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
 }  # fmt: skip
