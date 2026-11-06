@@ -142,6 +142,11 @@ blob_fixups: blob_fixups_user_type = {
               b'\x03\x80\x94\x70\x12\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00',
               b'\x03\x80\x10\x70\x12\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00',
         ),
+    'vendor/lib64/sensors.ssc.so': blob_fixup()
+        .binary_regex_replace( # Configure lux_aod as on-change: cbz w0 -> nop
+              b'\x21\x58\x14\x91\xe0\x03\x15\xaa\x09\x99\x01\x94\x60\x08\x00\x34',
+              b'\x21\x58\x14\x91\xe0\x03\x15\xaa\x09\x99\x01\x94\x1f\x20\x03\xd5',
+        ),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
 }  # fmt: skip
