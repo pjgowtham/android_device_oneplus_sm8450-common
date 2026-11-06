@@ -10,7 +10,7 @@ pci-msm-drv.ko
 clk-scmi.ko
 evacc-tuna.ko
 debugcc-kera.ko
-debugcc-sun.ko
+debugcc-waipio.ko
 debugcc-tuna.ko
 videocc-tuna.ko
 bam_dma.ko
