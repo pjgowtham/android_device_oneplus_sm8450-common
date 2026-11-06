@@ -69,8 +69,7 @@ BOARD_BOOTCONFIG := \
     androidboot.load_modules_parallel=performance \
     androidboot.memcg=1 \
     androidboot.serialconsole=0 \
-    androidboot.usbcontroller=a600000.dwc3 \
-    androidboot.vendor.qspa=true
+    androidboot.usbcontroller=a600000.dwc3
 
 BOARD_KERNEL_CMDLINE := \
     console=ttynull \
