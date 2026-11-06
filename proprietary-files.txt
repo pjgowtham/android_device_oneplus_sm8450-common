@@ -83,9 +83,7 @@ vendor/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor/lib/rfsa/adsp/libcvpdsp_2_1.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
-vendor/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
 vendor/lib/rfsa/adsp/libevadsp_3_0.so
-vendor/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhalide_hexagon_remote_skel.so
@@ -96,10 +94,7 @@ vendor/lib/rfsa/adsp/libmobilenet_dsp_frc
 vendor/lib/rfsa/adsp/libmobilenet_dsp_frc_networks
 vendor/lib/rfsa/adsp/libosie_skel.so
 vendor/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
-vendor/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
-vendor/lib/rfsa/adsp/libtracker_6dof_skel_8250.so
-vendor/lib/rfsa/adsp/libtracker_6dof_skel_8350.so
 vendor/lib/rfsa/adsp/libvpp_ais_networks
 vendor/lib/rfsa/adsp/libvpp_vqa_networks
 vendor/lib/rfsa/adsp/libvpt_action_recognition
