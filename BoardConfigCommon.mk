@@ -229,7 +229,8 @@ BOOT_SECURITY_PATCH := 2026-09-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy_vndr/sm8750/SEPolicy.mk
+include device/lineage/sepolicy/qcom/sepolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
 # Verified Boot
