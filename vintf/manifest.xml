@@ -2,7 +2,7 @@
      Copyright (C) 2022 The Linux Foundation
      SPDX-License-Identifier: BSD-3-Clause
 -->
-<manifest version="8.0" type="device" target-level="202404">
+<manifest version="8.0" type="device" target-level="7">
     <hal format="aidl">
         <name>android.hardware.gatekeeper</name>
         <version>1</version>

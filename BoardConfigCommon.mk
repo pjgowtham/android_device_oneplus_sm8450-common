@@ -113,6 +113,7 @@ TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/waipio_perf.config \
     vendor/oplus/waipio_perf.config
+TARGET_KERNEL_CONFIG_EXT := $(COMMON_PATH)/kernel_release.config
 
 # Kernel modules
 BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.load.system_dlkm))
