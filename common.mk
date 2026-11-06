@@ -373,6 +373,9 @@ PRODUCT_PACKAGES += \
 # Recovery
 $(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
 
+# RmNet
+$(call soong_config_set,rmnetctl,old_rmnet_data,true)
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
