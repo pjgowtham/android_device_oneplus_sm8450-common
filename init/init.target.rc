@@ -64,6 +64,7 @@ import /vendor/etc/init/hw/init.qti.kernel.rc
 on early-init
     write /proc/sys/kernel/printk_devkmsg ratelimited
     export MEMTAG_OPTIONS off
+    exec_start gki.modprobe
 
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -182,3 +183,12 @@ service vendor.audioadsprpcd_audiopd /vendor/bin/audioadsprpcd audiopd adsp
     user media
     group media
     setenv ADSP_LIBRARY_PATH ";/system/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/dsp;/vendor/dsp;/odm/lib/rfsa/adsp;/vendor/lib/rfsa/adsp"
+
+service gki.modprobe /vendor/bin/system_dlkm_modprobe.sh
+    class main
+    user root
+    group root system
+    disabled
+    stdio_to_kmsg
+    seclabel u:r:vendor_modprobe:s0
+    oneshot
