@@ -72,7 +72,6 @@ vendor/lib/rfsa/adsp/bm2n53.bin
 vendor/lib/rfsa/adsp/bm2n54.bin
 vendor/lib/rfsa/adsp/bm2n55.bin
 vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
-vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
 vendor/lib/rfsa/adsp/libVppFrcQnnHtp
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
 vendor/lib/rfsa/adsp/libapn_dsp_skel.so
@@ -606,12 +605,7 @@ vendor/lib64/vendor.qti.qspmhal-impl.so|0e6ad39e3d2521d6dcbbf1c4d7c7b069f219e4ea
 
 # SCVE
 vendor/etc/eva/facedetection/model3.dat
-vendor/etc/face3d/qcnn_concat_file_model-0324_2_encrypted
-vendor/lib64/libFace3DTA.so
-vendor/lib64/libFace3D_hlos.so
-vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libcvpcpuRev_skel.so
-vendor/lib64/libface3d_dev.so
 vendor/lib64/libfastcrc.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
