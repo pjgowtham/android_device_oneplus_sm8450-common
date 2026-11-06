@@ -215,6 +215,8 @@ vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishalwrapper.so
 
 # Display (SDM) - from pdx257 PDX268_GLOBALEEA-A4_USER_74.1.A.2.42
+vendor/bin/hw/vendor.qti.hardware.display.color-service|489a61cd172ba61f9df33da073483f62e556b4bc
+vendor/bin/ppd|a7e731c5ffeeab89ea637ad0676aa4e78a146b78
 vendor/etc/display/camera_alignments.json|41e88f386e5afacd59747f4221f8caa6fe4da4cb
 vendor/etc/display/cpu_alignments.json|0344679651b634807465759a46f49a0ff71322d7
 vendor/etc/display/default_alignments.json|7613cc249f1499da40e1c5fbe805a53a41d6533e
@@ -223,6 +225,7 @@ vendor/etc/display/formats.json|c5746a4b038fecb6fa0e795ecec2919e1df125ea
 vendor/etc/display/graphics_alignments.json|057a121f203fd295014e06863dff43586227ffdb
 vendor/etc/display/ubwc_alignments.json|7ee10dc2512caae4068dfb974e88e74164eb4097
 vendor/etc/display/video_alignments.json|1da7a17e680a77d447d906cda9c3701017b1a3fc
+vendor/etc/init/vendor.qti.hardware.display.color-service.rc|3184edb3f185e2a9e42bf610200ebac1f4e87d8f
 vendor/lib64/libdigital-dimming.so|b71804db676b9a35d07dd119caa2efb3715ae825
 vendor/lib64/libdisp-aba.so|43d989e8bc62d78180fcf37ee64b3d78fa11eb84
 vendor/lib64/libdisplayqos.so|efd8df7eb08e496a474e9cc10e7fe68a3176880d|cc1ad235f3f900c4a07d51f8f1e360ad668cec5e
@@ -279,23 +282,11 @@ vendor/etc/init/feature_enabler_client.rc
 vendor/lib64/libPanelChaplin.so
 
 # Display services
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/ppd
 vendor/bin/qdcmss
 vendor/bin/qguard
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/qguard.rc
-vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/qguard.json
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.color@1.6.so
-vendor/lib64/vendor.display.color@1.7.so
-vendor/lib64/vendor.display.postproc@1.0.so
 
 # dpAP Firmware
 vendor/firmware/dpAP_full.mbn
@@ -335,7 +326,7 @@ vendor/lib64/egl/libq3dtools_esx.so|cd4f1614ca84f69d18b47b0e6700d144817649c3
 vendor/lib64/libCB.so|9e517d1c738139781b75c3e815737a054f54d508
 vendor/lib64/libOpenCL.so|8dfb387e215706c692884bbcd5e1b14cc83e4b5f
 vendor/lib64/libOpenCL_adreno.so|05d6e9bc0b4b52f20af05752e4bb7a6b64410563
-vendor/lib64/libadreno_app_profiles.so
+vendor/lib64/libadreno_app_profiles.so|d1935170aa8d3b734df994ae5f933722f239f8d0
 vendor/lib64/libadreno_compiler_cl.so|b3e4011d60a78c4078a16a2e064c59064ebb4d94
 vendor/lib64/libadreno_utils.so|9347f1174b1963ccfe21d8c679c52e7b462eca7f
 vendor/lib64/libgpudataproducer.so|003f5ad15ec3e1ad015d181b2f12736878c65507
@@ -617,12 +608,14 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 system_ext/etc/init/qspa_system.rc
 system_ext/etc/qspa/qspa_default.rc
 
-# QSPM
-vendor/bin/vendor.qti.qspmhal@1.0-service
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
-vendor/etc/seccomp_policy/qspm.policy
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
-vendor/lib64/vendor.qti.qspmhal@1.0.so
+# QSPM - from pdx257 PDX268_GLOBALEEA-A4_USER_74.1.A.2.42
+vendor/bin/vendor.qti.qspmhal-service|6997db60bccd14cadef6d1bb68d22f280dc7d427
+vendor/etc/init/vendor.qti.qspmhal-service.rc|b9fd698739169d1485f437c437d2b83548670f5a
+vendor/etc/seccomp_policy/qspm.policy|87f5c78589f9efabee61683942a5b63ffeb5f22e
+vendor/etc/vintf/manifest/vendor.qti.qspmhal-service.xml|c35d488de20351b3e5be97811d5c4609c7834c16
+vendor/lib64/libqspm-mem-utils-vendor.so|182370137f6665971052e6d8aea7b36daf9fcc66
+vendor/lib64/vendor.qti.qspmhal-V1-ndk.so|318a94e6908d233d2b680b6e97cb0826078d8a0e
+vendor/lib64/vendor.qti.qspmhal-impl.so|0e6ad39e3d2521d6dcbbf1c4d7c7b069f219e4ea
 
 # SCVE
 vendor/etc/eva/facedetection/model3.dat
