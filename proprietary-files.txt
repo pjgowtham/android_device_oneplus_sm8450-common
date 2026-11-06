@@ -111,8 +111,6 @@ vendor/lib64/libeai_float.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/libmcs.so
 vendor/lib64/libqtigefar.so;DISABLE_DEPS
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 
 # Audio FX modules
 vendor/lib64/soundfx/libasphere.so
