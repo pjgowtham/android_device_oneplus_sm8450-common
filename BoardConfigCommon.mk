@@ -89,7 +89,26 @@ BOARD_KERNEL_IMAGE_NAME := Image
 
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8450
 
-TARGET_KERNEL_ADDITIONAL_FLAGS := CONFIG_OPLUS_DEVICE_DTBS=y
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    CONFIG_EXCLUDE_ICNSS=y \
+    CONFIG_OPLUS_DEVICE_DTBS=y \
+    CONFIG_OPLUS_FEATURE_DUMP_DEVICE_INFO=m \
+    CONFIG_OPLUS_FEATURE_MDMFEATURE=m \
+    CONFIG_OPLUS_FEATURE_PMIC_MONITOR=m \
+    CONFIG_OPLUS_FEATURE_SENSOR_CFG=m \
+    CONFIG_OPLUS_FINGERPRINT_COMMON=m \
+    CONFIG_OPLUS_FPGA_MONITOR=m \
+    CONFIG_OPLUS_SENSOR_FB_QC=m \
+    CONFIG_OPLUS_TRIKEY_HALL=m \
+    CONFIG_OPLUS_TRIKEY_MAIN=m \
+    CONFIG_TOUCHPANEL_CUSTOM=m \
+    CONFIG_TOUCHPANEL_OPLUS=m \
+    CONFIG_TOUCHPANEL_SYNAPTICS=m \
+    CONFIG_TOUCHPANEL_SYNAPTICS_TCM_ONCELL=m \
+    CONFIG_TOUCHPANEL_SYNAPTICS_TCM_S3910=m \
+    CONFIG_TOUCHSCREEN_FTS=m \
+    CONFIG_TOUCHSCREEN_HBP_CORE=m \
+    CONFIG_TOUCHSCREEN_HBP_SYNA_S3910=m
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/waipio_perf.config \
@@ -119,7 +138,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/audio-kernel \
     qcom/opensource/securemsm-kernel \
-    qcom/opensource/synx-kernel \
+    qcom/opensource/synx-kernel-v1 \
     qcom/opensource/camera-kernel \
     qcom/opensource/datarmnet-ext/mem \
     qcom/opensource/dataipa/drivers/platform/msm \
@@ -133,7 +152,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/display-drivers/msm \
     qcom/opensource/dsp-kernel \
-    qcom/opensource/eva-kernel \
+    qcom/opensource/eva-kernel-v1 \
     qcom/opensource/graphics-kernel \
     qcom/opensource/spu-kernel \
     qcom/opensource/video-driver \
@@ -143,11 +162,7 @@ TARGET_KERNEL_EXT_MODULES := \
 
 TARGET_KERNEL_EXT_MODULES += \
     oplus/hardware/radio/kernel/mdmfeature:kbuild \
-    oplus/kernel/camera:kbuild \
     oplus/kernel/cpu/thermal:kbuild \
-    oplus/kernel/device_info/cs_press:kbuild \
-    oplus/kernel/device_info/magnetic_cover:kbuild \
-    oplus/kernel/device_info/pogo_keyboard:kbuild \
     oplus/kernel/device_info/tri_state_key:kbuild \
     oplus/kernel/dfr:kbuild \
     oplus/kernel/network/oplus_network_oem_qmi:kbuild \
@@ -155,14 +170,12 @@ TARGET_KERNEL_EXT_MODULES += \
     oplus/kernel/network/oplus_network_sim_detect:kbuild \
     oplus/kernel/network/oplus_rf_cable_monitor:kbuild \
     oplus/kernel/nfc/oplus_nfc:kbuild \
-    oplus/kernel/nfc/thn31:kbuild \
     oplus/kernel/touchpanel/oplus_touchscreen_v2/touch_custom:kbuild \
     oplus/kernel/touchpanel/oplus_touchscreen_v2:kbuild \
     oplus/kernel/touchpanel/synaptics_hbp:kbuild \
     oplus/kernel/tp/hbp/hbp:kbuild \
-    oplus/secure/biometrics/fingerprints/bsp/uff/driver:kbuild \
+    oplus/secure/biometrics/fingerprints/bsp/drivers_kernel/component3.0/qcom:kbuild \
     oplus/secure/common/bsp/drivers/oplus_secure_common \
-    oplus/sensor/kernel/oplus_consumer_ir:kbuild \
     oplus/sensor/kernel/qcom/sensor:kbuild \
     nxp/opensource/driver
 
