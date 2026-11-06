@@ -331,8 +331,8 @@ echo 0 > /proc/sys/walt/sched_boost
 echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 
 # Limit kswapd in cpu0-6
-echo `ps -elf | grep -v grep | grep kswapd0 | awk '{print $2}'` > /dev/cpuset/kswapd-like/tasks
-echo `ps -elf | grep -v grep | grep kcompactd0 | awk '{print $2}'` > /dev/cpuset/kswapd-like/tasks
+echo `pidof kswapd0` > /dev/cpuset/kswapd-like/tasks
+echo `pidof kcompactd0` > /dev/cpuset/kswapd-like/tasks
 
 # configure governor settings for silver cluster
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
