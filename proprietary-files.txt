@@ -370,7 +370,6 @@ vendor/lib64/libqtikeymint.so
 vendor/lib64/libspcom.so
 
 # Media
-odm/etc/camera/media_profiles.xml:odm/etc/media_profiles_V1_0.xml
 odm/lib64/libc++_shared.so
 odm/lib64/liboplusvppfilter.so
 odm/lib64/libosie_process.so
