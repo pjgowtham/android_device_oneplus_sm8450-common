@@ -46,7 +46,6 @@ vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/libmasc.so;DISABLE_CHECKELF
-vendor/lib64/libshsc.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
@@ -81,7 +80,6 @@ vendor/bin/embmsslServer
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qti
-vendor/bin/shsusrd
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/init/dataadpl.rc
@@ -89,7 +87,6 @@ vendor/etc/init/dataqti.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
-vendor/etc/init/shsusrd.rc
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -112,6 +109,11 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
+
+# Data (SHS) - from pdx257 PDX268_GLOBALEEA-A4_USER_74.1.A.2.42
+vendor/bin/shsusrd|ab22c3e3c0c0155064e1cb23df5c24952ce9b70a
+vendor/etc/init/shsusrd.rc|22ff980a8daaf62fd091485541a4c8c10fdeb4a9
+vendor/lib64/libshsc.so|4ab216b4ed1473da5e9f767adebdede85e01814e
 
 # DPM
 system_ext/bin/dpmd
