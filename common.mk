@@ -380,7 +380,8 @@ $(call soong_config_set,rmnetctl,old_rmnet_data,true)
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
     sensors.dynamic_sensor_hal \
-    sensors.fusionlight
+    sensors.oplus \
+    sensors.oplus_wrapper
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -400,6 +401,8 @@ ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml
 endif
+
+$(call soong_config_set,OPLUS_SENSORS_WRAPPER,BACKEND_SUBHAL_LIB_NAME,sensors.ssc.so)
 
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 202404
