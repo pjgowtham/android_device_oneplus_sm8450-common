@@ -135,6 +135,7 @@ vendor.gatekeeper.is_security_level_spu=0
 
 # Graphics
 debug.graphics.game_default_frame_rate.disabled=0
+debug.hwui.use_hint_manager=true
 debug.sf.auto_latch_unsignaled=1
 debug.sf.early.app.duration.144=10333333
 debug.sf.early.app.duration.165=4500000
